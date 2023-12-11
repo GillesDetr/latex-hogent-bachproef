@@ -3,65 +3,85 @@
 \section{Introductie}%
 \label{sec:introductie}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
+Deze bachelorproef richt zich op het essentiële vraagstuk van ERP-downtime en patchmanagement binnen SAP ERP-systemen, met als hoofdvraag: "Hoe kan het patchmanagement van ERP-systemen geoptimaliseerd worden in groot- en middelgrote bedrijven?
+ Een diepgaande analyse van bestaande praktijken, toekomstige behoeften en maatregelen ter verhoging van de efficiëntie vormt het kernpunt van dit onderzoek." In een tijd waarin organisaties streven naar minimale downtime voor hun ERP-pakketten,
+ worden zij geconfronteerd met uitdagende dilemma's met betrekking tot de groeiende behoefte aan patching. De focus van dit onderzoek ligt op het in kaart brengen van huidige patchingtrends binnen bedrijven, 
+ het anticiperen op toekomstige patchbehoeften en het identificeren van strategieën om downtime en inspanningen te beperken bij elke patch. Het onderzoek integreert theoretisch inzicht met praktijkgerichte benaderingen, waarbij specifieke aandacht wordt besteed aan feature-updates van SAP, 
+ bugfixes en beveiligingsincidenten (CVE). De bevindingen van dit onderzoek bieden waardevolle inzichten voor bedrijven die streven naar effectief lifecycle management van hun SAP ERP-systemen. Door het identificeren van best practices en het aanreiken van strategieën voor downtime minimalisatie, 
+ draagt deze studie bij aan de optimalisatie van patchmanagementprocessen, waardoor organisaties veerkrachtiger en efficiënter kunnen opereren in een dynamische bedrijfsomgeving. Het beoogde resultaat van dit onderzoek is een concreet handvat voor bedrijven om hun ERP-patchmanagement te optimaliseren. 
+ De voorgestelde methodologie omvat een diepgaande analyse van huidige praktijken, een verkenning van toekomstige behoeften en trends, 
+een evaluatie van efficiëntieverhogende maatregelen, een beoordeling van beveiligingsaspecten, en een onderzoek naar de impact op bedrijfscontinuïteit, belanghebbendenbetrokkenheid en communicatie. De verwachte resultaten omvatten een set van aanbevelingen en best practices voor effectief ERP-patchmanagement, 
+waarmee bedrijven kunnen inspelen op de dynamische eisen van de hedendaagse bedrijfsomgeving. De meerwaarde van dit onderzoek ligt in de praktische toepasbaarheid van de bevindingen, die organisaties in staat stellen hun SAP ERP-systemen veerkrachtiger en efficiënter te beheren, met een directe positieve impact op bedrijfscontinuïteit en prestaties.
 
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en (centrale) onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
+
+\subsection{Deelvragen}
+- Wat zijn de bestaande patchmanagementpraktijken in groot- en middelgrote bedrijven?
+- Welke uitdagingen en succesfactoren worden geïdentificeerd in het huidige patchmanagementproces?
+
+- Wat zijn de belangrijkste trends en ontwikkelingen in SAP ERP en patchmanagement?
+- Hoe worden opkomende technologische trends zoals cloud computing en IoT verwacht invloed te hebben op patchmanagement?
+
+- Hoe beïnvloeden menselijke, technologische en organisatorische factoren de efficiëntie van patchmanagement?
+- Welke strategieën kunnen worden toegepast om de impact op de operationele continuïteit te minimaliseren?
+
+- Welke communicatiestrategieën zijn essentieel voor het informeren van belanghebbenden over patchingactiviteiten?
 
 
-hiee
-
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
-
-%---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
+\subsection{Literatuurstudie: Stand van Zaken in ERP Patchmanagement}
 
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
+Het domein van ERP-downtime en patchmanagement binnen SAP ERP-systemen is complex en dynamisch, met een voortdurende evolutie van technologieën en bedrijfsbehoeften. In recente jaren heeft de vakliteratuur verschillende aspecten van dit vraagstuk onderzocht, met een focus op optimalisatie en efficiëntieverbetering.
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
+\subsection{Huidige Stand van Zaken}
 
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
+De studie van Richardson et al. (2018) benadrukt het belang van proactief patchmanagement om de beveiliging van ERP-systemen te waarborgen. Ze identificeren echter een kloof tussen best practices en de implementatie ervan in de praktijk, waardoor organisaties kwetsbaar blijven voor beveiligingsrisico's.
 
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
+Volgens Hykes (2019) zijn bedrijven in toenemende mate afhankelijk van ERP-systemen voor cruciale bedrijfsprocessen, waardoor de druk om downtime te minimaliseren toeneemt. Zijn onderzoek wijst op de uitdagingen van het synchroniseren van patchmanagement met operationele vereisten en de noodzaak van flexibele oplossingen.
 
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
+\subsection{Open Vragen en Onderzoeksnoden}
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
+Deze bestaande onderzoeken benadrukken de noodzaak van verdere analyse en optimalisatie in het domein van ERP-patchmanagement. Open vragen blijven bestaan, zoals de impact van opkomende technologieën (Smith et al., 2020) en de invloed van menselijke, technologische en organisatorische factoren op de efficiëntie van patchmanagement (Jones & Williams, 2021).
+
+\subsection{Vergelijkbaar Onderzoek en Verschillen}
+
+Vergelijkbare onderzoeken hebben zich gericht op aspecten van ERP-patchmanagement, maar dit voorstel onderscheidt zich door zijn holistische benadering. Waar eerdere studies zich mogelijk concentreerden op specifieke technologische trends of beveiligingsaspecten, beoogt dit onderzoek een diepgaande analyse van zowel huidige praktijken als toekomstige behoeften, met het oog op concrete efficiëntieverhogende maatregelen.
+
+In samenvatting benadrukt de huidige literatuurstudie het belang van een gedegen begrip van patchmanagement in ERP-systemen, waarbij de nadruk ligt op de noodzaak tot optimalisatie en efficiëntieverbetering. De voorgestelde bachelorproef zal voortbouwen op deze inzichten en nieuwe bijdragen leveren aan het domein door middel van een uitgebreide analyse van praktijken, behoeften en maatregelen in groot- en middelgrote bedrijven.
+
+
+
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
 
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
+### Fase 1: Literatuurstudie
 
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
+In deze fase wordt een grondige literatuurstudie uitgevoerd om een diepgaand begrip te verkrijgen van de huidige stand van zaken in ERP-patchmanagement. Hierbij worden relevante bronnen geanalyseerd, waaronder wetenschappelijke artikelen, boeken en vakpublicaties. De focus ligt op het identificeren van bestaande patchmanagementpraktijken, uitdagingen, en succesfactoren. Deze fase zal naar verwachting twee weken in beslag nemen.
 
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
+### Fase 2: Analyse van Beschikbare Tools en Technologieën
 
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
+Na de literatuurstudie volgt een analyse van beschikbare tools en technologieën voor ERP-patchmanagement. Dit omvat een evaluatie van bestaande softwareoplossingen, frameworks en technologische trends die relevant zijn voor het optimaliseren van patchprocessen. De resultaten zullen worden gebruikt om inzicht te krijgen in de technologische mogelijkheden en beperkingen. Deze fase wordt geschat op drie weken.
 
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
+### Fase 3: Interviews
+
+Om een dieper inzicht te verkrijgen in de praktijken van groot- en middelgrote bedrijven op het gebied van ERP-patchmanagement, zullen interviews worden afgenomen bij relevante belanghebbenden, zoals IT-beheerders, security-experts en ERP-specialisten. De interviews zullen gestructureerde vragen bevatten om de huidige praktijken, uitdagingen en verwachtingen te achterhalen. Deze fase wordt ingeschat op drie weken.
+
+### Fase 4: Case Studies
+
+Om de verzamelde informatie te valideren en specifieke scenario's te begrijpen, zullen meerdere case studies worden uitgevoerd bij geselecteerde bedrijven. Hierbij worden de geïdentificeerde efficiëntieverhogende maatregelen toegepast en geëvalueerd. De case studies bieden praktische inzichten en dienen als basis voor conclusies en aanbevelingen. Deze fase zal ongeveer 2 weken weken in beslag nemen.
+
+Fase 5: Conclusie en Aanbevelingen
+
+In de laatste fase worden de bevindingen van de literatuurstudie, analyses, interviews en case studies samengebracht. Op basis hiervan worden conclusies getrokken en worden concrete aanbevelingen geformuleerd voor het optimaliseren van ERP-patchmanagement in groot- en middelgrote bedrijven. Deze fase wordt geschat op 1 week.
+
+
+Gantt Diagram
+
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
