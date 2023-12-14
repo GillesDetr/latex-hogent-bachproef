@@ -3,15 +3,10 @@
 \section{Introductie}%
 \label{sec:introductie}
 
-Deze bachelorproef richt zich op het essentiële vraagstuk van ERP-downtime en patchmanagement binnen SAP ERP-systemen, met als hoofdvraag: "Hoe kan het patchmanagement van ERP-systemen geoptimaliseerd worden in groot- en middelgrote bedrijven?
- Een diepgaande analyse van bestaande praktijken, toekomstige behoeften en maatregelen ter verhoging van de efficiëntie vormt het kernpunt van dit onderzoek." In een tijd waarin organisaties streven naar minimale downtime voor hun ERP-pakketten,
- worden zij geconfronteerd met uitdagende dilemma's met betrekking tot de groeiende behoefte aan patching. De focus van dit onderzoek ligt op het in kaart brengen van huidige patchingtrends binnen bedrijven, 
- het anticiperen op toekomstige patchbehoeften en het identificeren van strategieën om downtime en inspanningen te beperken bij elke patch. Het onderzoek integreert theoretisch inzicht met praktijkgerichte benaderingen, waarbij specifieke aandacht wordt besteed aan feature-updates van SAP, 
- bugfixes en beveiligingsincidenten (CVE). De bevindingen van dit onderzoek bieden waardevolle inzichten voor bedrijven die streven naar effectief lifecycle management van hun SAP ERP-systemen. Door het identificeren van best practices en het aanreiken van strategieën voor downtime minimalisatie, 
- draagt deze studie bij aan de optimalisatie van patchmanagementprocessen, waardoor organisaties veerkrachtiger en efficiënter kunnen opereren in een dynamische bedrijfsomgeving. Het beoogde resultaat van dit onderzoek is een concreet handvat voor bedrijven om hun ERP-patchmanagement te optimaliseren. 
- De voorgestelde methodologie omvat een diepgaande analyse van huidige praktijken, een verkenning van toekomstige behoeften en trends, 
-een evaluatie van efficiëntieverhogende maatregelen, een beoordeling van beveiligingsaspecten, en een onderzoek naar de impact op bedrijfscontinuïteit, belanghebbendenbetrokkenheid en communicatie. De verwachte resultaten omvatten een set van aanbevelingen en best practices voor effectief ERP-patchmanagement, 
-waarmee bedrijven kunnen inspelen op de dynamische eisen van de hedendaagse bedrijfsomgeving. De meerwaarde van dit onderzoek ligt in de praktische toepasbaarheid van de bevindingen, die organisaties in staat stellen hun SAP ERP-systemen veerkrachtiger en efficiënter te beheren, met een directe positieve impact op bedrijfscontinuïteit en prestaties.
+Het domein van ERP-downtime en patchmanagement binnen SAP ERP-systemen is complex en dynamisch, met voortdurende technologische evoluties en aanpassingen aan bedrijfsbehoeften. In dit onderzoek richten we ons op een diepgaande analyse van hoe het patchmanagement van ERP-systemen geoptimaliseerd kan worden in groot- en middelgrote bedrijven. De essentiële rol van ERP-software in bedrijfsomgevingen wordt benadrukt door het wijdverbreide gebruik ervan, waarbij volgens \autocite{StatistiekVlaanderen2022} 62\% van de ondernemingen met minstens 10 werknemers in 2021 ERP-software implementeerde. Voor grotere ondernemingen met minstens 250 werknemers was dit zelfs 92\%.
+Het patchmanagement in middelgrote en grote bedrijven vertoont variatie, met uitdagingen zoals trage updates, compatibiliteitsproblemen en mogelijke verstoring van bedrijfsactiviteiten. De noodzaak om patches tijdig toe te passen, vooral voor het aanpakken van beveiligingskwetsbaarheden, wordt onderstreept door de alarmerende aantal ransomware-aanvallen.
+De hoofdvraag die dit onderzoek aanpakt, luidt als volgt: "Hoe kan het patchmanagement van ERP-systemen geoptimaliseerd worden in groot- en middelgrote bedrijven?" Het doel is om een holistisch begrip te ontwikkelen van bestaande patchmanagementpraktijken, de invloed van trends in SAP ERP, en de keuze tussen handmatig en automatisch patchen. Tevens zullen we de impact onderzoeken van menselijke, technologische en organisatorische factoren op het ERP-patchingproces.
+Door een uitgebreide literatuurstudie, analyse van beschikbare tools en technologieën, interviews met belanghebbenden en case studies bij bedrijven, streven we naar concrete inzichten. De bevindingen zullen resulteren in conclusies en aanbevelingen om het ERP-patchmanagement te optimaliseren, met een focus op minimale impact op de continuïteit, effectieve communicatie en het aanpakken van onbeantwoorde vragen in het proces.
 
 
 \subsection{Deelvragen}
@@ -31,30 +26,50 @@ waarmee bedrijven kunnen inspelen op de dynamische eisen van de hedendaagse bedr
 \section{State-of-the-art}%
 \label{sec:state-of-the-art}
 
-\subsection{Literatuurstudie: Stand van Zaken in ERP Patchmanagement}
+\subsection{ERP Integratie}
+Het domein van ERP-downtime en patchmanagement binnen SAP ERP-systemen is complex en dynamisch, met een voortdurende evolutie van technologieën en bedrijfsbehoeften. In een studie van \autocite{StatistiekVlaanderen2022} wordt de enorme integratie van ERP-software in bedrijfsomgevingen in België benadrukt, waaruit blijkt dat 62 \% van de ondernemingen met minstens 10 werknemers in 2021 ERP-software gebruikte. Deze statistiek geeft aan dat ERP-software, die zorgt voor een geautomatiseerde gegevensuitwisseling tussen verschillende afdelingen, een essentieel instrument is geworden voor het delen van informatie binnen bedrijven. Bovendien blijkt uit de gegevens dat grotere ondernemingen vaker gebruik maken van ERP-software, waarbij maar liefst 92\% van de ondernemingen met minstens 250 werknemers deze technologie implementeerde.
 
-Het domein van ERP-downtime en patchmanagement binnen SAP ERP-systemen is complex en dynamisch, met een voortdurende evolutie van technologieën en bedrijfsbehoeften. In recente jaren heeft de vakliteratuur verschillende aspecten van dit vraagstuk onderzocht, met een focus op optimalisatie en efficiëntieverbetering.
+\subsection{Bestaande Patchmanagementpraktijken}
 
-\section{Stand van Zaken}%
-\label{sec:stand-van-zaken}
+In middelgrote en grote bedrijven variëren de manieren waarop ze patches beheren. Meestal betekent dit dat ze regelmatig hun software bijwerken om beveiligingsproblemen op te lossen en de prestaties te verbeteren. Toch komen ze ook voor uitdagingen, zoals langzame updates, problemen met compatibiliteit en verstoring van bedrijfsactiviteiten.
 
-\subsection{Literatuurstudie: Huidige Toestand van ERP Patchmanagement}
+Om dit goed te doen, moeten bedrijven slimme strategieën toepassen. Een actieve aanpak, automatische patchtools en duidelijke communicatie zijn sleutels tot succes. Door vooruit te denken, automatisch te updaten en goed te communiceren met alle betrokkenen, kunnen bedrijven volgens \autocite{Josh2022} de obstakels van patchmanagement succesvol overwinnen. 
 
-Het domein van ERP-downtime en patchmanagement binnen SAP ERP-systemen is complex en dynamisch, met een voortdurende evolutie van technologieën en bedrijfsbehoeften. In recente jaren heeft de vakliteratuur verschillende aspecten van dit vraagstuk onderzocht, met een focus op optimalisatie en efficiëntieverbetering.
+Volgens \autocite{Hykes2019} zijn bedrijven in toenemende mate afhankelijk van ERP-systemen voor cruciale bedrijfsprocessen, waardoor de druk om downtime te minimaliseren toeneemt. Zijn onderzoek wijst op de uitdagingen van het synchroniseren van patchmanagement met operationele vereisten en de noodzaak van flexibele oplossingen.
 
-\subsection{Huidige Stand van Zaken}
+\subsection{Nood aan ERP patching }
+Belangrijke softwarebedrijven brengen regelmatig patches uit met drie hoofddoelen: het aanpakken van beveiligingskwetsbaarheden, het repareren van bugs en het introduceren van nieuwe functies. Het tijdig toepassen van beveiligingspatches is cruciaal, aangezien hackers actief op zoek zijn naar kwetsbare systemen. Volgens \autocite{Griffiths2022} werden in 2021 alleen al 623,3 miljoen ransomware-aanvallen geregistreerd, een veelgebruikte tactiek bij SAP-gerelateerde aanvallen. Dit onderstreept de voortdurende noodzaak om up-to-date te blijven met de nieuwste updates. Ten tweede kunnen patches bugs repareren, waardoor de stabiliteit van de software verbetert en vervelende problemen worden geëlimineerd. Tot slot brengen leveranciers af en toe patches uit om nieuwe functies te introduceren. Deze voortdurende behoefte aan ERP-patching onderstreept het belang van effectief patchmanagement om de beveiliging, stabiliteit en functionaliteit van ERP-systemen te waarborgen.
 
-De studie van Richardson et al. (2018) benadrukt het belang van proactief patchmanagement om de beveiliging van ERP-systemen te waarborgen. Ze identificeren echter een kloof tussen best practices en de implementatie ervan in de praktijk, waardoor organisaties kwetsbaar blijven voor beveiligingsrisico's.
+In de huidige trends binnen SAP ERP zien we regelmatige updates die zowel de functionaliteit als de beveiliging verbeteren. Patchmanagement evolueert naar meer geautomatiseerde processen \autocite{Mukkamala2022}, waardoor bedrijven sneller en efficiënter kunnen reageren op nieuwe patches. De opkomst van cloud computing en Internet of Things (IoT) kan echter de complexiteit van patchmanagement vergroten, met nieuwe uitdagingen op het gebied van connectiviteit en beveiliging. Het is van cruciaal belang dat organisaties zich bewust zijn van deze trends en zich aanpassen aan een dynamisch ERP-landschap. 
 
-Volgens Hykes (2019) zijn bedrijven in toenemende mate afhankelijk van ERP-systemen voor cruciale bedrijfsprocessen, waardoor de druk om downtime te minimaliseren toeneemt. Zijn onderzoek wijst op de uitdagingen van het synchroniseren van patchmanagement met operationele vereisten en de noodzaak van flexibele oplossingen.
+\subsection{Manueel of Automatisch patchen}
+Patchmanagementmethoden kunnen verschillende voor- en nadelen met zich meebrengen, afhankelijk van de gekozen aanpak.
+
+Enerzijds biedt handmatig patchen meer controle aan IT-teams, waardoor ze unieke eisen kunnen accommoderen en compatibiliteitsproblemen kunnen vermijden. Deze methode maakt ook een grondige beoordeling en goedkeuring van patches mogelijk, waardoor het risico op onbedoelde gevolgen wordt verminderd.
+
+Anderzijds is handmatig patchen tijdsintensief, waarbij voortdurende inspanningen vereist zijn om patches te monitoren, beoordelen en implementeren. De menselijke factor verhoogt bovendien het risico op fouten, en de constante monitoring van beveiligingsbulletins en patchreleases kan uitdagend zijn voor organisaties met beperkte middelen of complexe IT-infrastructuur. Automatisch patchen daarentegen biedt efficiëntie door het stroomlijnen van het patchmanagementproces en het verminderen van de werklast voor IT-teams. Het zorgt voor consistentie door patches uniform te implementeren op alle systemen, waardoor het risico op gemiste patches en kwetsbaarheden wordt verminderd. Daarnaast garandeert het een tijdige implementatie door automatisch downloaden, testen en implementeren volgens een vooraf bepaald schema.
+
+Aan de andere kant vereist automatisch patchen een betrouwbare tool voor effectiviteit. Finetunen kan nodig zijn om problematische patches te vermijden, wat pre-implementatietests en aangepaste instellingen inhoudt. Er bestaat ook het risico van het implementeren van incompatibele patches die systeemproblemen of conflicten kunnen veroorzaken, wat regelmatige controle van patchimplementatielogs noodzakelijk maakt. Het kiezen tussen handmatig en automatisch patchen hangt af van de specifieke behoeften en middelen van een organisatie \autocite{Firch2023}. Het is dus belangrijk dat een organisatie goed beslist of ze handmatig of automatisch willen patchen, afhankelijk van hun behoeften.
+
+\subsection{ Invloed van Menselijke, Technologische en Organisatorische Factoren}
+Voor succesvol patchmanagement spelen verschillende factoren een cruciale rol. Bewustwording en training zijn essentieel voor menselijke betrokkenheid, terwijl geavanceerde patchingtools en automatisering de technologische efficiëntie verbeteren. Volgens \autocite{ServiceNow2020} bedraagt de gemiddelde tijd die nodig is om een kritieke kwetsbaarheid te patchen ongeveer 16 dagen.
+
+Het is dus belangrijk dat organisatorische factoren, zoals een helder patchbeleid en samenwerking tussen IT-teams, de basis leggen voor een gestroomlijnd en effectief patchmanagementproces om de kwetsbaarheid zo snel mogelijk op te lossen. Samengevoegd dragen deze elementen bij aan een veilige en efficiënte IT-infrastructuur.
+
+\subsection{ Strategieën voor Minimale Impact op Continuïteit}
+
+Effectieve patching vereist zorgvuldige planning om de impact te minimaliseren. Het is raadzaam patchactiviteiten te plannen tijdens niet-kritieke operationele periodes. Daarnaast kan een gefaseerde implementatie, beginnend met minder kritieke systemen, de operationele continuïteit waarborgen. Het implementeren van fallback-strategieën is essentieel voor een snelle en efficiënte herstelprocedure in geval van onvoorziene problemen. Patching kan falen door verschillende redenen, variërend van onverenigbare hardware tot conflicten met andere patches, of een patch die goed installeert maar iets anders kapotmaakt \autocite{Shein2022}.
+
+\subsection{ Essentiële Communicatiestrategieën voor Belanghebbenden}
+Heldere en tijdige communicatie met belanghebbenden over geplande patchactiviteiten is van vitaal belang. Het is essentieel om begrijpelijke informatie te verstrekken over de redenen achter patching, mogelijke impact en benodigde voorzorgsmaatregelen \autocite{Toren2019}. Daarnaast zijn het opzetten van communicatiekanalen voor feedback en het bieden van ondersteuning aan gebruikers eveneens cruciaal voor een succesvolle implementatie.
+
 
 \subsection{Open Vragen en Onderzoeksnoden}
 
-Deze bestaande onderzoeken benadrukken de noodzaak van verdere analyse en optimalisatie in het domein van ERP-patchmanagement. Open vragen blijven bestaan, zoals de impact van opkomende technologieën (Smith et al., 2020) en de invloed van menselijke, technologische en organisatorische factoren op de efficiëntie van patchmanagement (Jones \& Williams, 2021).
-
+Binnen het domein van ERP-patching blijven enkele wezenlijke vragen onbeantwoord. Het vinden van een optimale balans tussen het minimaliseren van operationele kosten en het beperken van schadekosten door beveiligingskwetsbaarheden vereist verdere verkenning, met specifieke aandacht voor praktische implementatieaspecten. Ook is het noodzakelijk om de impact van patchmanagement op bedrijfscontinuïteit te onderzoeken en te begrijpen hoe verschillende patchmanagementpraktijken de dagelijkse operaties van organisaties beïnvloeden. Daarnaast is er behoefte aan inzicht in hoe bedrijven van verschillende omvang ERP-systemen implementeren en welke specifieke noden zij hebben op het gebied van patchmanagement. Het onderzoek moet ook de rol van menselijke, technologische en organisatorische factoren in het ERP-patchingproces verkennen. Identificatie van de invloed van deze factoren op de efficiëntie van patchmanagement en het ontwikkelen van strategieën om hiermee om te gaan, zijn van vitaal belang om een optimaal patchmanagement te realiseren. Ten slotte moet de studie uitbreiden naar communicatiestrategieën en belanghebbendenbetrokkenheid om te begrijpen hoe effectieve communicatie kan bijdragen aan het succesvol implementeren van patchmanagementprocessen in organisaties. Kortom, verdere verkenning is nodig voor een diepgaand begrip en praktische toepasbaarheid van effectief ERP-patchmanagement.
 \subsection{Vergelijkbaar Onderzoek en Verschillen}
 
-Vergelijkbare onderzoeken hebben zich gericht op aspecten van ERP-patchmanagement, maar dit voorstel onderscheidt zich door zijn holistische benadering. Waar eerdere studies zich mogelijk concentreerden op specifieke technologische trends of beveiligingsaspecten, beoogt dit onderzoek een diepgaande analyse van zowel huidige praktijken als toekomstige behoeften, met het oog op concrete efficiëntieverhogende maatregelen.
+Vergelijkbare onderzoeken hebben zich gericht op aspecten van patchmanagement, maar dit voorstel onderscheidt zich door zijn holistische benadering. Waar eerdere studies zich mogelijk concentreerden op specifieke technologische trends of beveiligingsaspecten, beoogt dit onderzoek een diepgaande analyse van zowel huidige praktijken als toekomstige behoeften, met het oog op concrete efficiëntie verhogende maatregelen.
 
 In samenvatting benadrukt de huidige literatuurstudie het belang van een gedegen begrip van patchmanagement in ERP-systemen, waarbij de nadruk ligt op de noodzaak tot optimalisatie en efficiëntieverbetering. De voorgestelde bachelorproef zal voortbouwen op deze inzichten en nieuwe bijdragen leveren aan het domein door middel van een uitgebreide analyse van praktijken, behoeften en maatregelen in groot- en middelgrote bedrijven.
 
@@ -64,7 +79,7 @@ In samenvatting benadrukt de huidige literatuurstudie het belang van een gedegen
 
 \subsection{Fase 1: Literatuurstudie}
 
-In deze fase wordt een grondige literatuurstudie uitgevoerd om een diepgaand begrip te verkrijgen van de huidige stand van zaken in ERP-patchmanagement. Hierbij worden relevante bronnen geanalyseerd, waaronder wetenschappelijke artikelen, boeken en vakpublicaties. De focus ligt op het identificeren van bestaande patchmanagementpraktijken, uitdagingen, en succesfactoren. Deze fase zal naar verwachting twee weken in beslag nemen.
+In de eerste fase wordt een grondige literatuurstudie uitgevoerd om een diepgaand begrip te verkrijgen van de huidige stand van zaken in ERP-patchmanagement. Hierbij worden relevante bronnen geanalyseerd, waaronder wetenschappelijke artikelen en vakpublicaties. De focus ligt op het identificeren van bestaande patchmanagementpraktijken, uitdagingen, en succesfactoren. Deze fase zal naar verwachting twee weken in beslag nemen.
 
 \subsection{Fase 2: Analyse van Beschikbare Tools en Technologieën}
 
@@ -72,22 +87,29 @@ Na de literatuurstudie volgt een analyse van beschikbare tools en technologieën
 
 \subsection{Fase 3: Interviews}
 
-Om een dieper inzicht te verkrijgen in de praktijken van groot- en middelgrote bedrijven op het gebied van ERP-patchmanagement, zullen interviews worden afgenomen bij relevante belanghebbenden, zoals IT-beheerders, security-experts en ERP-specialisten. De interviews zullen gestructureerde vragen bevatten om de huidige praktijken, uitdagingen en verwachtingen te achterhalen. Deze fase wordt ingeschat op drie weken.
+Om een dieper inzicht te verkrijgen in de praktijken van groot- en middelgrote bedrijven op het gebied van ERP-patchmanagement, zullen interviews worden afgenomen bij relevante belanghebbenden, zoals IT-beheerders, security-experts en ERP-specialisten. De interviews zullen vragen bevatten om de huidige praktijken, uitdagingen en verwachtingen te achterhalen. Deze vragen zullen opgesteld worden met de opgedane kennis van voorafgaande fasen. De benodigde tijd hiervoor wordt ingeschat op drie weken.
 
 \subsection{Fase 4: Case Studies}
 
-Om de verzamelde informatie te valideren en specifieke scenario's te begrijpen, zullen meerdere case studies worden uitgevoerd bij geselecteerde bedrijven. Hierbij worden de geïdentificeerde efficiëntieverhogende maatregelen toegepast en geëvalueerd. De case studies bieden praktische inzichten en dienen als basis voor conclusies en aanbevelingen. Deze fase zal ongeveer 2 weken weken in beslag nemen.
+Om de verzamelde informatie te valideren en specifieke situaties te begrijpen, zullen meerdere case studies worden uitgevoerd bij geselecteerde bedrijven. Hierbij worden de geïdentificeerde efficiëntie verhogende maatregelen geëvalueerd. De case studies bieden praktische inzichten en dienen als basis voor conclusies en aanbevelingen. Deze fase zal ongeveer drie weken in beslag nemen.
 
 \subsection{Fase 5: Conclusie en Aanbevelingen}
 
-In de laatste fase worden de bevindingen van de literatuurstudie, analyses, interviews en case studies samengebracht. Op basis hiervan worden conclusies getrokken en worden concrete aanbevelingen geformuleerd voor het optimaliseren van ERP-patchmanagement in groot- en middelgrote bedrijven. Deze fase wordt geschat op 1 week.
+In de laatste fase worden de bevindingen van de literatuurstudie, analyses, interviews en case studies samengebracht. Op basis hiervan worden conclusies getrokken en worden concrete aanbevelingen geformuleerd voor het optimaliseren van ERP-patchmanagement in groot- en middelgrote bedrijven. Deze fase wordt geschat op één week.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[]{graphics/methodologie.png}
+    \caption{FlowChart van de methodologie}
+    \label{fig:afbeelding}
+  \end{figure}
+  
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwachte Resultaten en Conclusie}%
 \label{sec:verwachte-resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+In de complexe wereld van ERP-downtime en patchmanagement in SAP ERP-systemen, spelen groot- en middelgrote bedrijven een cruciale rol in het handhaven van operationele efficiëntie te midden van technologische evoluties. De integratie van ERP-software is wijdverbreid en daarom ook vaak een doel van cyberaanvallen, hierdoor is er nood aan het tijdig patchen van beveiligingsrisico’s. 
+Patchmanagementpraktijken variëren in organisatie tot organisatie, met enkele uitdagingen zoals trage updates en compatibiliteitsproblemen. Succes hangt af van factoren zoals proactieve benaderingen, geautomatiseerde tools en heldere communicatie.
+Trends in SAP ERP wijzen op regelmatige updates en een verschuiving naar geautomatiseerde patchprocessen. Menselijke, technologische en organisatorische factoren blijken cruciaal in patchmanagement. Bewustwording, training, geavanceerde tools en samenwerking zijn sleutels tot succes. Aanbevelingen omvatten strategieën voor minimale impact op de continuïteit, effectieve communicatie en het verkennen van onbeantwoorde vragen in ERP-patching.
+De voorgestelde bachelorproef onderscheidt zich door zijn holistische aanpak, die waardevolle inzichten en aanbevelingen belooft voor het optimaliseren van ERP-patchmanagement in groot- en middelgrote bedrijven.
