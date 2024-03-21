@@ -1,0 +1,51 @@
+%==============================================================================
+% Sjabloon onderzoeksvoorstel bachproef
+%==============================================================================
+% Gebaseerd op document class `hogent-article'
+% zie <https://github.com/HoGentTIN/latex-hogent-article>
+
+% Voor een voorstel in het Engels: voeg de documentclass-optie [english] toe.
+% Let op: kan enkel na toestemming van de bachelorproefcoördinator!
+\documentclass{hogent-article}
+\usepackage{graphicx}
+
+% Invoegen bibliografiebestand
+\addbibresource{voorstel.bib}
+
+
+% Informatie over de opleiding, het vak en soort opdracht
+\studyprogramme{Professionele bachelor toegepaste informatica}
+\course{Bachelorproef}
+\assignmenttype{Onderzoeksvoorstel}
+
+\academicyear{2023-2024} % TODO: pas het academiejaar aan
+
+% TODO: Werktitel
+\title{Optimalisatie van ERP (Enterprise resource planning) Patchmanagement in Groot- en Middelgrote Bedrijven: Een Diepgaande Analyse van Praktijken, Toekomstige Behoeften en Efficiëntieverhogende Maatregelen}
+
+% TODO: Studentnaam en emailadres invullen
+\author{Gilles Detrooz}
+\email{gilles.detrooz@student.hogent.be}
+
+
+% TODO: Geef de co-promotor op
+%\supervisor[Co-promotor]{S. Beekman (Synalco, \href{mailto:sigrid.beekman@synalco.be}{sigrid.beekman@synalco.be})}
+
+
+\specialisation{System \& Network Administrator}
+\keywords{ERP-patchmanagement, SAP ERP, Patchmanagement, Patchmanagementpraktijken,, Technologische trends, Automatisch patchen}
+
+\begin{document}
+
+\begin{abstract}
+    Dit onderzoek richt zich op de optimalisatie van het patchmanagement binnen SAP ERP-systemen (Enterprise resource planning) in groot- en middelgrote bedrijven. Met de wijdverbreide integratie van ERP-software, en de toenemende dreiging van cyberaanvallen, is effectief patchmanagement essentieel. De centrale onderzoeksvraag luidt: "Hoe kan het patchmanagement van ERP-systemen geoptimaliseerd worden in groot- en middelgrote bedrijven die gebruikmaken van SAP ERP?" De doelstelling is het bieden van concrete inzichten en aanbevelingen, met een verwacht eindresultaat dat niet alleen een scriptie omvat, maar ook praktisch toepasbare aanbevelingen voor het specifieke bedrijf dat als casus dient. De voorgestelde methodologie omvat een literatuurstudie, analyse van beschikbare tools en technologieën, interviews, en case studies. Verwacht wordt dat dit onderzoek bijdraagt aan een holistisch begrip van patchmanagement, met waardevolle implicaties voor de IT-professionals en organisaties die SAP ERP-systemen gebruiken. Het succes van het onderzoek wordt gemeten aan de hand van de effectiviteit en implementeerbaarheid van de voorgestelde optimalisatiemaatregelen, waarmee een directe meerwaarde wordt geboden aan de doelgroep.
+\tableofcontents
+\end{abstract}
+
+% De hoofdtekst van het voorstel zit in een apart bestand, zodat het makkelijk
+% kan opgenomen worden in de bijlagen van de bachelorproef zelf.
+\input{voorstel-inhoud}
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
