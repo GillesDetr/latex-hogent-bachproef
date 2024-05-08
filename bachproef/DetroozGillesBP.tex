@@ -128,17 +128,17 @@
 %\mainmatter{}
 
 
-\section{Uitdagingen en Knelpunten}
-Een van de belangrijkste uitdagingen die organisaties tegenkomen, is de complexiteit van het patchmanagementproces, vooral bij grootschalige ERP-systemen zoals SAP. Het beheren van patches voor meerdere systemen en applicaties binnen het ERP-landschap kan een uitdaging zijn vanwege de afhankelijkheden en mogelijke verstoringen. Het gebrek aan automatisering en integratie tussen patchmanagementtools en ERP-systemen kan de efficiëntie verminderen en de kans op fouten vergroten.
+        % \section{Uitdagingen en Knelpunten}
+        % Een van de belangrijkste uitdagingen die organisaties tegenkomen, is de complexiteit van het patchmanagementproces, vooral bij grootschalige ERP-systemen zoals SAP. Het beheren van patches voor meerdere systemen en applicaties binnen het ERP-landschap kan een uitdaging zijn vanwege de afhankelijkheden en mogelijke verstoringen. Het gebrek aan automatisering en integratie tussen patchmanagementtools en ERP-systemen kan de efficiëntie verminderen en de kans op fouten vergroten.
 
-\section{Verwachtingen en Toekomstige Ontwikkelingen}
-Respondenten benadrukten de behoefte aan meer geautomatiseerde en gestroomlijnde patchmanagementprocessen om de complexiteit te verminderen en de reactietijd te verbeteren. Er is een groeiende interesse in geavanceerde patchmanagementtools, zoals Avantra, die specifiek zijn ontworpen voor SAP ERP-systemen en kunnen helpen bij het automatiseren van patching en het beheer van systeemconfiguraties.
+        % \section{Verwachtingen en Toekomstige Ontwikkelingen}
+        % Respondenten benadrukten de behoefte aan meer geautomatiseerde en gestroomlijnde patchmanagementprocessen om de complexiteit te verminderen en de reactietijd te verbeteren. Er is een groeiende interesse in geavanceerde patchmanagementtools, zoals Avantra, die specifiek zijn ontworpen voor SAP ERP-systemen en kunnen helpen bij het automatiseren van patching en het beheer van systeemconfiguraties.
 
-\section{Avantra voor Patchautomatisatie}
-Respondenten die al gebruik maken van Avantra voor patchautomatisatie, rapporteerden positieve ervaringen met betrekking tot het vereenvoudigen van het patchproces en het verminderen van handmatige inspanningen. Avantra biedt mogelijkheden voor geautomatiseerde patchdetectie, -evaluatie en -implementatie, waardoor organisaties snel kunnen reageren op kwetsbaarheden en beveiligingspatches. De integratie van Avantra met SAP ERP-systemen biedt een naadloze ervaring en minimaliseert de kans op fouten door menselijke tussenkomst.
+        % \section{Avantra voor Patchautomatisatie}
+        % Respondenten die al gebruik maken van Avantra voor patchautomatisatie, rapporteerden positieve ervaringen met betrekking tot het vereenvoudigen van het patchproces en het verminderen van handmatige inspanningen. Avantra biedt mogelijkheden voor geautomatiseerde patchdetectie, -evaluatie en -implementatie, waardoor organisaties snel kunnen reageren op kwetsbaarheden en beveiligingspatches. De integratie van Avantra met SAP ERP-systemen biedt een naadloze ervaring en minimaliseert de kans op fouten door menselijke tussenkomst.
 
-\section{Conclusie}
-Al met al tonen de resultaten aan dat er een duidelijke behoefte is aan verbeteringen in het patchmanagementproces voor SAP ERP-systemen, met name door middel van automatisering en geavanceerde tools zoals Avantra. Organisaties streven naar efficiëntere en effectievere manieren om hun systemen up-to-date en beveiligd te houden, en oplossingen zoals Avantra spelen een cruciale rol bij het realiseren van deze doelstellingen.
+        % \section{Conclusie}
+        % Al met al tonen de resultaten aan dat er een duidelijke behoefte is aan verbeteringen in het patchmanagementproces voor SAP ERP-systemen, met name door middel van automatisering en geavanceerde tools zoals Avantra. Organisaties streven naar efficiëntere en effectievere manieren om hun systemen up-to-date en beveiligd te houden, en oplossingen zoals Avantra spelen een cruciale rol bij het realiseren van deze doelstellingen.
 
 
 
@@ -155,6 +155,83 @@ Al met al tonen de resultaten aan dat er een duidelijke behoefte is aan verbeter
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
 % elke fase in je onderzoek in een apart hoofdstuk bespreken.
+\chapter{\IfLanguageName{dutch}{Case Study}{Consultantiebedrijf}}
+\label{ch:corpus}
+
+\section{huidige situatie}
+
+Indien we niet aan patchmanagement willen doen kunnen we een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday. Vele bedrijven willen dit echter niet doen door vele
+ redenen zoals één van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
+ Deze aanpassingen kunnen variëren van maatwerkvereisten tot complexe integraties met bestaande systemen, die beter kunnen worden beheerd in een lokale omgeving.
+Daarnaast spelen dataveiligheid en compliance een cruciale rol, vooral voor organisaties in sectoren zoals overheid, gezondheidszorg en financiële dienstverlening.
+ Strikte regelgeving en compliance-eisen vereisen vaak een hoog niveau van controle over dataopslag en -beheer, wat gemakkelijker te realiseren is in een lokale omgeving.
+Bovendien hebben sommige organisaties al aanzienlijk geïnvesteerd in lokale infrastructuur, zoals datacenters en servers, waardoor de overstap naar de cloud kostbaar kan zijn.
+ Het behoud van bestaande investeringen en de mogelijkheid om de infrastructuur te blijven gebruiken, kunnen de voorkeur genieten boven migratie naar de cloud.
+Verder bieden lokale implementaties vaak meer flexibiliteit en controle over configuratie en aanpassingen, waardoor organisaties beter kunnen inspelen op hun specifieke behoeften en 
+bedrijfsprocessen. Dit niveau van aanpassingsmogelijkheden kan cruciaal zijn voor het succes van ERP-implementaties.
+Hoewel cloudoplossingen abonnementsmodellen en voorspelbare kosten bieden, kunnen sommige organisaties op de lange termijn goedkoper uit zijn met een lokale implementatie, vooral als
+ ze al beschikken over de benodigde infrastructuur en expertise.
+Tot slot kan het intern beheren van ERP-systemen organisaties een gevoel van vertrouwen geven in hun eigen teams en processen voor risicobeheer en operationele controle, wat belangrijk 
+kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom focussen we ons hier op systemen die zelf beheerd worden. 
+De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider en beoordeelt of deze effectief nut heeft. Of het nut heeft wordt
+ meestal bepaald door het type patch. Indien het een component patch is zal dit een minder dringende patch zijn ten opzichte van een cve (Common Vulnerabilities and Exposures) patch. De
+  kostprijs, tijd en impact berekenen die de patch nodig zal hebben zal hard verschillen van patch tot patch. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
+   met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces kan dus niet verder geoptimaliseerd worden.
+
+
+ Het omkaderde deel in figuur xx is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
+
+
+
+
+ Enkele tools die kunnen worden gebruikt zijn Avantra en SolarWinds Patch Manager BigFix. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
+ Avantra is specifiek gericht op SAP-systemen, waardoor diepgaande integratie en optimalisatie mogelijk is. Het biedt geautomatiseerde patchmanagementprocessen en real-time monitoring, maar heeft 
+ mogelijk beperkte functionaliteit voor niet-SAP-systemen.
+ SolarWinds Patch Manager heeft een eenvoudige implementatie en gebruiksvriendelijke interface, geschikt voor kleine tot middelgrote bedrijven. Het biedt ondersteuning voor een breed scala aan 
+ systemen, maar heeft mogelijk beperkte automatiseringsmogelijkheden.
+ 
+ Voor niet-SAP-systemen zou SolarWinds Patch Manager een goede keuze kunnen zijn. Het biedt een breed scala aan ondersteunde besturingssystemen en softwareapplicaties, waardoor het geschikt is voor
+  een diverse IT-infrastructuur. Bovendien staat SolarWinds bekend om zijn gebruiksvriendelijke interface en eenvoudige implementatie, wat vooral handig kan zijn voor organisaties die geen gespecialiseerde IT-vaardigheden hebben.
+ Avantra heeft een zeer user vriendelijk design, op volgend scherm geef je de configuratie van de SAP Kernel in en geef je bepaalde parameters mee voor wanneer je bijvoorbeeld de downtime, backup of 
+ rollback wil configureren zoals we zien in figuur xx
+ 
+
+
+
+
+
+Daarnaast is alles ook zeer transparant, alle fasen van het proces worden duidelijk vermeld en er wordt bevestiging gegeven als die fase correct is verlopen. In de figuur xx zien we dat Avantra verschillende
+nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goed werd configureert, een back-up maken van de huidige staat, bericht sturen naar de gebruikers om de real time status weer
+   te geven, het systeem automatisch naar beneden halen. En indien nodig een rollback uitvoeren met de voorgaande back-up die werk gemaakt.
+
+
+Indien men wenst kan men ook de berichten meer in detail bekijken zodat er kan gezien worden waar de fout zou zitten mocht er één zijn.
+
+
+\section{Opstelling Avantra systeen}
+Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur xx staat een mogelijk opstelling voor een Avantra systeem. 
+
+
+
+
+
+De Avantra UI is de gebruikersinterface waarmee IT-teams toegang hebben tot alle functionaliteiten van het Avantra-platform. Hier kunnen ze de gezondheid, prestaties en compliance van hun SAP-omgeving 
+monitoren, configuraties beheren, rapporten genereren en acties uitvoeren om problemen op te lossen. Op deze UI zal de patchbeheerder de patch moeten uploaden en enkele configuraties instellen zoals eerder vermeld in figuur xx.
+
+De automatisatie server is het hart van Avantra. Het is verantwoordelijk voor het uitvoeren van geautomatiseerde taken en processen binnen de SAP-omgeving. Dit omvat het controleren van systeemprestaties, het detecteren
+ van problemen, het uitvoeren van herstelmaatregelen en het implementeren van configuratiewijzigingen.
+
+De database server van Avantra slaat alle relevante gegevens op met betrekking tot de SAP-omgeving van de klant. Dit omvat informatie over systeemconfiguraties, prestatiegegevens, logs, meldingen en historische
+ trends. De database server fungeert als een centrale opslagplaats voor het analyseren en rapporteren van gegevens.
+
+Tot slot integreert Avantra met de SAP-server van de klant, waar de bedrijfskritieke SAP-applicaties draaien. Avantra maakt verbinding met deze server om real-time gegevens te verzamelen, zoals transactielogs, systeemprestaties
+ en configuratie-instellingen. Op basis van deze gegevens kan Avantra proactief problemen identificeren, mogelijke risico's signaleren en automatisch acties ondernemen om de stabiliteit en betrouwbaarheid van de SAP-omgeving te waarborgen.
+
+Samengevat biedt Avantra een geïntegreerd platform voor het beheren, monitoren en automatiseren van SAP-systemen, waarbij gebruik wordt gemaakt van een intuïtieve gebruikersinterface en geavanceerde 
+automatiseringstechnologieën om de operationele efficiëntie te verbeteren en de bedrijfscontinuïteit te waarborgen.
+
+
+
 
 %\input{...}
 %\input{...}
