@@ -161,18 +161,22 @@
 \section{Patching vermijden}
 
 Patching kan vermeden worden door het te laten opnemen door de ERP provider zelf, zo kan men een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij deze bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
- willen dit echter niet doen door vele redenen, één van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
+ willen dit echter niet doen door vele redenen.\\
+ 
+ Eén van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
  Deze aanpassingen kunnen variëren van maatwerkvereisten tot complexe integraties met bestaande systemen, die beter kunnen worden beheerd in een lokale omgeving.
 Daarnaast spelen dataveiligheid en compliance een cruciale rol, vooral voor organisaties in sectoren zoals overheid, gezondheidszorg en financiële dienstverlening.
- Strikte regelgeving en compliance-eisen vereisen vaak een hoog niveau van controle over dataopslag en -beheer, wat gemakkelijker te realiseren is in een lokale omgeving.
-Bovendien hebben sommige organisaties al aanzienlijk geïnvesteerd in lokale infrastructuur, zoals datacenters en servers, waardoor de overstap naar de cloud kostbaar kan zijn.
- Het behoud van bestaande investeringen en de mogelijkheid om de infrastructuur te blijven gebruiken, kunnen de voorkeur genieten boven migratie naar de cloud.
+ Strikte regelgeving en compliance-eisen vereisen vaak een hoog niveau van controle over dataopslag en -beheer, wat gemakkelijker te realiseren is in een lokale omgeving.\\ 
+
+Bovendien hebben sommige organisaties al aanzienlijk geïnvesteerd in lokale infrastructuur, waardoor de overstap naar de cloud kostbaar kan zijn en niet meer de moeite meer is.
 Verder bieden lokale implementaties vaak meer flexibiliteit en controle over configuratie en aanpassingen, waardoor organisaties beter kunnen inspelen op hun specifieke behoeften en 
-bedrijfsprocessen. Dit niveau van aanpassingsmogelijkheden kan cruciaal zijn voor het succes van ERP-implementaties.
-Hoewel cloudoplossingen abonnementsmodellen en voorspelbare kosten bieden, kunnen sommige organisaties op de lange termijn goedkoper uit zijn met een lokale implementatie, vooral als
- ze al beschikken over de benodigde infrastructuur en expertise.
+bedrijfsprocessen.\\
+
+Hoewel cloudoplossingen een voorspelbare kosten bieden, kunnen sommige organisaties op de lange termijn goedkoper uit zijn met een lokale implementatie, vooral als
+ze al beschikken over de benodigde infrastructuur en expertise.\\
+
 Tot slot kan het intern beheren van ERP-systemen organisaties een gevoel van vertrouwen geven in hun eigen teams en processen voor risicobeheer en operationele controle, wat belangrijk 
-kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom wordt er gefocussen systemen die zelf lokaal of in de cloud beheerd worden door. In onderstaande figuur is de huidige situatie van het patchproces te vinden. binnen een ERP consultancy bedrijf \\
+kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom wordt er in dit onderzoek gefocussed op systemen die zelf beheerd zijn, lokaal of in de cloud. In figuur 1 is de huidige situatie van het patchproces te vinden binnen een ERP consultancy bedrijf \\
 
 \begin{figure}[htbp]
     \centering
@@ -184,7 +188,7 @@ kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregel
 De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider. Het patchingsproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
 om te patchen, dit bepalen ze meestal door het type patch. Indien het een component patch of hotfix (= dringende patch) is zal dit een minder dringende patch zijn ten opzichte van een CVE (Common Vulnerabilities and Exposures) patch. De kostprijs, tijd en impact berekenen
 die de patch nodig zal hebben zal verschillen van patch tot patch maar volgens (Heyndrick,2024) zal een gemidde patching procedure van een kernel tussen 30 minuten en 1uur duren per systeem, dit bevestigd nogmaals de nood aan automatisatie van dit proces. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
-met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces niet verder worden geoptimaliseerd. In dit schema is te zien dat er veel gecomuniceerd moet worden tussen alle betrokken partijen. \\
+met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces niet verder worden geoptimaliseerd. In figuur 1 is er ook duidelijk te zien dat er veel gecomuniceerd moet worden tussen alle betrokken partijen, dit is dus een essentieel onderdeel van het Patchmanagement. \\
 
 
 Het omkaderde deel in figuur 2 is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
@@ -217,7 +221,7 @@ Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systee
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra1.png}
-    \caption{figuur 3: Avantra patch configuratie}
+    \caption{Figuur 3: Avantra patch configuratie}
      \label{fig:avantra1}
 \end{figure}
 
@@ -231,7 +235,7 @@ nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goe
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra2.png}
-    \caption{figuur 4: Avantra patch configuratie detail}
+    \caption{Figuur 4: Avantra patch configuratie detail}
      \label{fig:avantra2}
 \end{figure}
 
@@ -242,7 +246,7 @@ Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan g
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra3.png}
-    \caption{figuur 5: Avantra patch configuratie}
+    \caption{Figuur 5: Avantra patch configuratie}
      \label{fig:avantra1}
 \end{figure}
 
@@ -252,29 +256,19 @@ Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur 5
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra4.png}
-    \caption{figuur 6: Avantra opstelling van het systeem}
+    \caption{Figuur 6: Avantra opstelling van het systeem}
      \label{fig:avantra1}
 \end{figure}
 
+Wanner er een automatisatie tool wordt gebruikt zoals Avantra, zal het bestaan uit meerdere servers. In figuur 5 staat enkele onderdelen van het Avantra systeem. De Avantra UI is de de interface waar de gebruikers effectief met communiceren, hierin staan alle functionaliteinten van het Avantra-Systeem. Zo kan bijvoorbeeld het SAP-systeem gemonitord worden. Op
+dit platform zal de patchbeheerder de patch moeten uploaden en de configuratie instellen. De automatisatie server zorgt voor het uitvoeren van de geautomatiseerd taken en processen binnen de SAP-omgeving dit is dan ook het centrum van het Avantra systeem.
 
+Vervolgens is er een Database server die relevante gegevens opslaat van de SAP-omgeving van de klant. Dit kan bijvoorbeeld informatie zijn over systeemconfiguraties, prestatiegegevens, logs, meldingen en historische trends. 
 
+Tot slot integreert Avantra met de SAP-server van de klant, waar de SAP-applicaties draaien. Avantra maakt verbinding met deze server om real-time gegevens te verzamelen.
+Op basis van deze gegevens kan Avantra proactief problemen identificeren, mogelijke risico's signaleren en eventueel automatisch acties ondernemen om de SAP-omgeving betrouwbaarder te maken.
 
-De Avantra UI is de gebruikersinterface waarmee IT-teams toegang hebben tot alle functionaliteiten van het Avantra-platform. Hier kunnen ze de gezondheid, prestaties en compliance van hun SAP-omgeving 
-monitoren, configuraties beheren, rapporten genereren en acties uitvoeren om problemen op te lossen. Op deze UI zal de patchbeheerder de patch moeten uploaden en enkele configuraties instellen zoals eerder vermeld in figuur xx.
-
-De automatisatie server is het hart van Avantra. Het is verantwoordelijk voor het uitvoeren van geautomatiseerde taken en processen binnen de SAP-omgeving. Dit omvat het controleren van systeemprestaties, het detecteren
- van problemen, het uitvoeren van herstelmaatregelen en het implementeren van configuratiewijzigingen.
-
-De database server van Avantra slaat alle relevante gegevens op met betrekking tot de SAP-omgeving van de klant. Dit omvat informatie over systeemconfiguraties, prestatiegegevens, logs, meldingen en historische
- trends. De database server fungeert als een centrale opslagplaats voor het analyseren en rapporteren van gegevens.
-
-Tot slot integreert Avantra met de SAP-server van de klant, waar de bedrijfskritieke SAP-applicaties draaien. Avantra maakt verbinding met deze server om real-time gegevens te verzamelen, zoals transactielogs, systeemprestaties
- en configuratie-instellingen. Op basis van deze gegevens kan Avantra proactief problemen identificeren, mogelijke risico's signaleren en automatisch acties ondernemen om de stabiliteit en betrouwbaarheid van de SAP-omgeving te waarborgen.
-
-Samengevat biedt Avantra een geïntegreerd platform voor het beheren, monitoren en automatiseren van SAP-systemen, waarbij gebruik wordt gemaakt van een intuïtieve gebruikersinterface en geavanceerde 
-automatiseringstechnologieën om de operationele efficiëntie te verbeteren en de bedrijfscontinuïteit te waarborgen.
-
-
+(TODO)
 
 
 %\input{...}
@@ -313,14 +307,14 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 
 \begin{figure}
     \centering
-    \includegraphics[height=\textwidth,angle=270]{huidigesituatie.jpg}
+    \includegraphics[height=0.7\textwidth,angle=270]{huidigesituatie.jpg}
     \caption{Bijlage 1: Huidige situatie}
     \label{fig:huidigesituatie}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[height=\textwidth,angle=270]{huidigesituatie2.png}
+    \includegraphics[height=0.7\textwidth,angle=270]{huidigesituatie2.png}
     \caption{Bijlage 2: Nieuwe situatie met patchautomatisatie}
      \label{fig:huidigesituatie2}
 \end{figure}
