@@ -98,8 +98,8 @@
 \maketitle
 \hypersetup{pageanchor=true}
 
-% \input{voorwoord}
-% \input{samenvatting}
+\input{voorwoord}
+\input{samenvatting}
 
 %---------- Inhoud, lijst figuren, ... -----------------------------------------
 
@@ -148,9 +148,9 @@
 % om bijvoorbeeld de inleiding en/of stand van zaken over meerdere hoofdstukken
 % te verspreiden!
 
-%\input{inleiding}
+\input{inleiding}
 \input{standvanzaken}
-%\input{methodologie}
+\input{methodologie}
 
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
@@ -160,7 +160,7 @@
 
 \section{Patching vermijden}
 
-Patching kan vermeden worden door het te laten opnemen door de erp provider zelf, zo kan men een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij deze bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
+Patching kan vermeden worden door het te laten opnemen door de ERP provider zelf, zo kan men een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij deze bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
  willen dit echter niet doen door vele redenen, één van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
  Deze aanpassingen kunnen variëren van maatwerkvereisten tot complexe integraties met bestaande systemen, die beter kunnen worden beheerd in een lokale omgeving.
 Daarnaast spelen dataveiligheid en compliance een cruciale rol, vooral voor organisaties in sectoren zoals overheid, gezondheidszorg en financiële dienstverlening.
@@ -174,20 +174,20 @@ Hoewel cloudoplossingen abonnementsmodellen en voorspelbare kosten bieden, kunne
 Tot slot kan het intern beheren van ERP-systemen organisaties een gevoel van vertrouwen geven in hun eigen teams en processen voor risicobeheer en operationele controle, wat belangrijk 
 kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom wordt er gefocussen systemen die zelf lokaal of in de cloud beheerd worden door. In onderstaande figuur is de huidige situatie van het patchproces te vinden. binnen een ERP consultancy bedrijf \\
 
-\begin{figure}
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie.jpg}
     \caption{Figuur 1: Huidige situatie}
     \label{fig:huidigesituatie}
 \end{figure}
 
-De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider. Het patchproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
-om te patchen, dit bepalen ze meestal door het type patch. Indien het een component patch of hotfix is zal dit een minder dringende patch zijn ten opzichte van een CVE (Common Vulnerabilities and Exposures) patch. De kostprijs, tijd en impact berekenen
-  die de patch nodig zal hebben zal hard verschillen van patch tot patch maar volgens (Heyndrick,2024) zal een gemidde patching procedure van een kernel tussen 30 minuten en 1uur duren. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
-  met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces kan dus niet verder geoptimaliseerd worden.
+De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider. Het patchingsproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
+om te patchen, dit bepalen ze meestal door het type patch. Indien het een component patch of hotfix (= dringende patch) is zal dit een minder dringende patch zijn ten opzichte van een CVE (Common Vulnerabilities and Exposures) patch. De kostprijs, tijd en impact berekenen
+die de patch nodig zal hebben zal verschillen van patch tot patch maar volgens (Heyndrick,2024) zal een gemidde patching procedure van een kernel tussen 30 minuten en 1uur duren per systeem, dit bevestigd nogmaals de nood aan automatisatie van dit proces. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
+met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces niet verder worden geoptimaliseerd. In dit schema is te zien dat er veel gecomuniceerd moet worden tussen alle betrokken partijen. \\
 
 
- Het omkaderde deel in figuur 2 is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
+Het omkaderde deel in figuur 2 is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
 
 
  \begin{figure}[htbp]
@@ -199,19 +199,19 @@ om te patchen, dit bepalen ze meestal door het type patch. Indien het een compon
 
 
 
- Enkele tools die kunnen worden gebruikt voor een kernel patch van een erp systeem zijn Avantra en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
+Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systeem zijn Avantra, SAP Landscape Management (LaMa) en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
 
  Avantra is specifiek gericht op SAP-systemen, waardoor diepgaande integratie en optimalisatie mogelijk is. Het biedt geautomatiseerde patchmanagementprocessen en real-time monitoring, maar heeft 
- mogelijk beperkte functionaliteit voor niet-SAP-systemen. Nog voor sap systemen is SAP SAP Landscape Management (LaMa) nog een alternatief. Deze software is nog niet zeer gebruiksvriendelijk, en heb je veel kennis nodig van de werking. Het voordeel 
- bij LaMa is dat je niet alleen kernel upgrades kan doen maar ook database upgrades vat niet het geval is bij Avantra. \\
+ mogelijk beperkte functionaliteit voor niet-SAP-systemen. Nog voor SAP systemen is SAP Landscape Management nog een alternatief. Deze software minder gebruiksvriendelijkk, en er is veel kennis nodig van de werking. Het voordeel 
+ bij LaMa is dat je niet alleen kernel patching kan doen maar ook database patching vat niet het geval is bij Avantra. \\
  SolarWinds Patch Manager heeft een eenvoudige implementatie en gebruiksvriendelijke interface, geschikt voor kleine tot middelgrote bedrijven. Het biedt ondersteuning voor een breed scala aan 
  systemen, maar heeft mogelijk beperkte automatiseringsmogelijkheden. \\
 
 
  Voor niet-SAP-systemen zou SolarWinds Patch Manager een goede keuze kunnen zijn. Het biedt een breed scala aan ondersteunde besturingssystemen en softwareapplicaties, waardoor het geschikt is voor
   een diverse IT-infrastructuur. Bovendien staat SolarWinds bekend om zijn gebruiksvriendelijke interface en eenvoudige implementatie, wat vooral handig kan zijn voor organisaties die geen gespecialiseerde IT-vaardigheden hebben.
- Avantra heeft een zeer user vriendelijk design, op volgend scherm geef je de configuratie van de SAP Kernel in en geef je bepaalde parameters mee voor wanneer je bijvoorbeeld de downtime, backup of 
- rollback wil configureren zoals we zien in figuur 3
+ Avantra heeft een zeer gebruiksvriendelijke vriendelijk design, op figuur 3 staat een voorbeeld van een patch configuratie van de SAP Kernel in en worden er bepaalde parameters mee gegeven: bijvoorbeeld de bundle, de downtime, backup of 
+ rollback wil configureren.
  
 
 \begin{figure}[htbp]
@@ -224,9 +224,9 @@ om te patchen, dit bepalen ze meestal door het type patch. Indien het een compon
 
 
 
-Daarnaast is alles ook zeer transparant, alle fasen van het proces worden duidelijk vermeld en er wordt bevestiging gegeven als die fase correct is verlopen. In de figuur xx zien we dat Avantra verschillende
+Daarnaast is alles ook zeer transparant, alle fasen van het proces worden duidelijk vermeld en er wordt bevestiging gegeven als de fase correct is verlopen. In de figuur 4 zien we dat Avantra verschillende
 nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goed werd configureert, een back-up maken van de huidige staat, bericht sturen naar de gebruikers om de real time status weer
-   te geven, het systeem automatisch naar beneden halen. En indien nodig een rollback uitvoeren met de voorgaande back-up die werk gemaakt.
+   te geven, het systeem automatisch naar beneden halen. En indien nodig een rollback uitvoeren met de voorgaande back-up die werd gemaakt.
 
 \begin{figure}[htbp]
     \centering
@@ -237,7 +237,7 @@ nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goe
 
 
 
-Indien men wenst kan men ook de berichten meer in detail bekijken zodat er kan gezien worden waar de fout zou zitten mocht er één zijn.
+Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan gezien worden waar de fout zou zitten mocht er één zijn.
 
 \begin{figure}[htbp]
     \centering
@@ -248,7 +248,7 @@ Indien men wenst kan men ook de berichten meer in detail bekijken zodat er kan g
 
 
 \section{Opstelling Avantra systeen}
-Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur xx staat een mogelijk opstelling voor een Avantra systeem. 
+Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur 5 staat een mogelijk opstelling voor een Avantra systeem. 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra4.png}
@@ -281,7 +281,7 @@ automatiseringstechnologieën om de operationele efficiëntie te verbeteren en d
 %\input{...}
 %...
 
-%\input{conclusie}
+\input{conclusie}
 
 %---------- Bijlagen -----------------------------------------------------------
 
@@ -295,7 +295,7 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 
 
 %% TODO: 
-%\section*{Samenvatting}
+\section*{Samenvatting}
 
 % Kopieer en plak hier de samenvatting (abstract) van je onderzoeksvoorstel.
 
