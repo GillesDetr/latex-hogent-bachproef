@@ -158,18 +158,10 @@
 \chapter{\IfLanguageName{dutch}{Case Study}{Consultantiebedrijf}}
 \label{ch:corpus}
 
-\section{huidige situatie}
+\section{Patching vermijden}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textheight,height=2\textwidth,angle=270]{huidigesituatie.jpg}
-    \caption{Figuur 1: Huidige situatie}
-    \label{fig:huidigesituatie}
-\end{figure}
-
-
-Indien we niet aan patchmanagement willen doen kunnen we een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday. Vele bedrijven willen dit echter niet doen door vele
- redenen zoals één van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
+Patching kan vermeden worden door het te laten opnemen door de erp provider zelf, zo kan men een service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij deze bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
+ willen dit echter niet doen door vele redenen, één van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
  Deze aanpassingen kunnen variëren van maatwerkvereisten tot complexe integraties met bestaande systemen, die beter kunnen worden beheerd in een lokale omgeving.
 Daarnaast spelen dataveiligheid en compliance een cruciale rol, vooral voor organisaties in sectoren zoals overheid, gezondheidszorg en financiële dienstverlening.
  Strikte regelgeving en compliance-eisen vereisen vaak een hoog niveau van controle over dataopslag en -beheer, wat gemakkelijker te realiseren is in een lokale omgeving.
@@ -180,14 +172,22 @@ bedrijfsprocessen. Dit niveau van aanpassingsmogelijkheden kan cruciaal zijn voo
 Hoewel cloudoplossingen abonnementsmodellen en voorspelbare kosten bieden, kunnen sommige organisaties op de lange termijn goedkoper uit zijn met een lokale implementatie, vooral als
  ze al beschikken over de benodigde infrastructuur en expertise.
 Tot slot kan het intern beheren van ERP-systemen organisaties een gevoel van vertrouwen geven in hun eigen teams en processen voor risicobeheer en operationele controle, wat belangrijk 
-kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom focussen we ons hier op systemen die zelf beheerd worden. 
-De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider en beoordeelt of deze effectief nut heeft. Of het nut heeft wordt
- meestal bepaald door het type patch. Indien het een component patch is zal dit een minder dringende patch zijn ten opzichte van een cve (Common Vulnerabilities and Exposures) patch. De
-  kostprijs, tijd en impact berekenen die de patch nodig zal hebben zal hard verschillen van patch tot patch. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
-   met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces kan dus niet verder geoptimaliseerd worden.
+kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving. Daarom wordt er gefocussen systemen die zelf lokaal of in de cloud beheerd worden door. In onderstaande figuur is de huidige situatie van het patchproces te vinden. binnen een ERP consultancy bedrijf \\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{huidigesituatie.jpg}
+    \caption{Figuur 1: Huidige situatie}
+    \label{fig:huidigesituatie}
+\end{figure}
+
+De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider. Het patchproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
+om te patchen, dit bepalen ze meestal door het type patch. Indien het een component patch of hotfix is zal dit een minder dringende patch zijn ten opzichte van een CVE (Common Vulnerabilities and Exposures) patch. De kostprijs, tijd en impact berekenen
+  die de patch nodig zal hebben zal hard verschillen van patch tot patch maar volgens (Heyndrick,2024) zal een gemidde patching procedure van een kernel tussen 30 minuten en 1uur duren. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
+  met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces kan dus niet verder geoptimaliseerd worden.
 
 
- Het omkaderde deel in figuur xx is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
+ Het omkaderde deel in figuur 2 is wat het meeste tijd inneemt in het patch proces en dat zou kunnen worden geoptimaliseerd. Dan zou het proces er al volgt uit
 
 
  \begin{figure}[htbp]
@@ -199,19 +199,22 @@ De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden
 
 
 
- Enkele tools die kunnen worden gebruikt zijn Avantra en SolarWinds Patch Manager BigFix. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
+ Enkele tools die kunnen worden gebruikt voor een kernel patch van een erp systeem zijn Avantra en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
+
  Avantra is specifiek gericht op SAP-systemen, waardoor diepgaande integratie en optimalisatie mogelijk is. Het biedt geautomatiseerde patchmanagementprocessen en real-time monitoring, maar heeft 
- mogelijk beperkte functionaliteit voor niet-SAP-systemen.
+ mogelijk beperkte functionaliteit voor niet-SAP-systemen. Nog voor sap systemen is SAP SAP Landscape Management (LaMa) nog een alternatief. Deze software is nog niet zeer gebruiksvriendelijk, en heb je veel kennis nodig van de werking. Het voordeel 
+ bij LaMa is dat je niet alleen kernel upgrades kan doen maar ook database upgrades vat niet het geval is bij Avantra. \\
  SolarWinds Patch Manager heeft een eenvoudige implementatie en gebruiksvriendelijke interface, geschikt voor kleine tot middelgrote bedrijven. Het biedt ondersteuning voor een breed scala aan 
- systemen, maar heeft mogelijk beperkte automatiseringsmogelijkheden.
- 
+ systemen, maar heeft mogelijk beperkte automatiseringsmogelijkheden. \\
+
+
  Voor niet-SAP-systemen zou SolarWinds Patch Manager een goede keuze kunnen zijn. Het biedt een breed scala aan ondersteunde besturingssystemen en softwareapplicaties, waardoor het geschikt is voor
   een diverse IT-infrastructuur. Bovendien staat SolarWinds bekend om zijn gebruiksvriendelijke interface en eenvoudige implementatie, wat vooral handig kan zijn voor organisaties die geen gespecialiseerde IT-vaardigheden hebben.
  Avantra heeft een zeer user vriendelijk design, op volgend scherm geef je de configuratie van de SAP Kernel in en geef je bepaalde parameters mee voor wanneer je bijvoorbeeld de downtime, backup of 
- rollback wil configureren zoals we zien in figuur xx
+ rollback wil configureren zoals we zien in figuur 3
  
 
- \begin{figure}[htbp]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra1.png}
     \caption{figuur 3: Avantra patch configuratie}
@@ -225,7 +228,7 @@ Daarnaast is alles ook zeer transparant, alle fasen van het proces worden duidel
 nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goed werd configureert, een back-up maken van de huidige staat, bericht sturen naar de gebruikers om de real time status weer
    te geven, het systeem automatisch naar beneden halen. En indien nodig een rollback uitvoeren met de voorgaande back-up die werk gemaakt.
 
-   \begin{figure}[htbp]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra2.png}
     \caption{figuur 4: Avantra patch configuratie detail}
@@ -252,8 +255,6 @@ Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur x
     \caption{figuur 6: Avantra opstelling van het systeem}
      \label{fig:avantra1}
 \end{figure}
-
-
 
 
 
@@ -302,6 +303,23 @@ Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat 
 % TODO: Voeg hier eventuele andere bijlagen toe. Bv. als je deze BP voor de
 % tweede keer indient, een overzicht van de verbeteringen t.o.v. het origineel.
 %\input{...}
+
+\chapter{bijlagen}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=2\textheight,height=\textwidth,angle=270]{huidigesituatie.jpg}
+    \caption{Bijlage 1: Huidige situatie}
+    \label{fig:huidigesituatie}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=2\textheight,height=\textwidth,angle=270]{huidigesituatie2.png}
+    \caption{Bijlage 2: Nieuwe situatie met patchautomatisatie}
+     \label{fig:huidigesituatie2}
+\end{figure}
+
 
 %%---------- Backmatter, referentielijst ---------------------------------------
 
