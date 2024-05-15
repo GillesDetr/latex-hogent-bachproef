@@ -40,11 +40,10 @@ Deze concepten worden weerspiegeld in het onderzoek van \textcite{Wrobel2023}, w
 \section{Patchmanagement vs Vulnerability management}
 Patchmanagement richt zich op het identificeren, implementeren en beheren van software-updates (patches) om bekende beveiligingslekken in systemen en applicaties te verhelpen. Het hoofddoel is om de beveiliging te versterken door kwetsbaarheden te dichten en het risico op succesvolle aanvallen te verminderen.
 
-Aan de andere kant omvat vulnerability management het identificeren, evalueren en beheren van kwetsbaarheden in systemen en netwerken, zowel bekende als onbekende, met als doel een proactieve benadering van beveiliging te bevorderen door kwetsbaarheden te verminderen of te elimineren. Terwijl patchmanagement 
+Aan de andere kant omvat vulnerability management het identificeren, evalueren en beheren van kwetsbaarheden in systemen en netwerken, zowel bekende als onbekende. Het doel hiervan is om een proactieve benadering van beveiliging te bevorderen door kwetsbaarheden te verminderen of te elimineren. 
 
-zich specifiek richt op het toepassen van patches om bekende kwetsbaarheden aan te pakken, omvat vulnerability management een breder scala aan activiteiten, waaronder configuratiebeheer, 
+Terwijl patchmanagement specifiek gericht is op het toepassen van patches om bekende kwetsbaarheden aan te pakken, omvat vulnerability management een breder scala aan activiteiten. Deze activiteiten omvatten configuratiebeheer, beveiligingsbewustzijnstraining en penetratietesten, allemaal gericht op het verbeteren van de algehele beveiliging en het beheersen van risico’s \autocite{Danby2023}
 
-beveiligingsbewustzijnstraining en penetratietesten, om de algehele beveiliging te verbeteren en risico's te beheren. \autocite{Danby2023}
 
 \section{Trends en ontwikkelingen in  ERP en patchmanagement}
 Recente ontwikkelingen binnen SAP ERP hebben geleid tot een aantal significante trends op het gebied van patchmanagement.
@@ -89,49 +88,29 @@ en downtime, wat op zijn beurt kan leiden tot financiële verliezen en reputatie
 
 \section{De keuze tussen handmatig en automatisch patchen}
 
-Binnen organisaties die gebruikmaken van SAP ERP-systemen, staan IT-teams vaak voor de uitdaging om te beslissen tussen handmatig patchen en automatisch patchen.
+Binnen organisaties die SAP ERP-systemen gebruiken, staan IT-teams vaak voor de keuze tussen handmatig of automatisch patchen. Beide benaderingen hebben hun eigen voor- en nadelen, en het is cruciaal dat organisaties de juiste keuze maken op basis van hun specifieke behoeften en omgeving.
 
-Elk van deze benaderingen heeft zijn eigen voor- en nadelen, en het is cruciaal voor organisaties om de juiste keuze te maken op basis van hun specifieke behoeften en omgeving.
+Handmatig patchen geeft IT-teams veel controle en flexibiliteit bij het beheren van patches in SAP ERP. Met deze aanpak kan elk patch-, klant- of server-combinatie afzonderlijk worden behandeld. Hierdoor kunnen alleen de noodzakelijke patches worden geïnstalleerd, precies wanneer dat nodig is, wat het risico op onbedoelde gevolgen vermindert. Handmatige patches kunnen ook worden aangepast aan de unieke behoeften van een organisatie, waardoor compatibiliteitsproblemen kunnen worden vermeden en de algehele stabiliteit van het ERP-systeem wordt gewaarborgd \autocite{hooper2018}.
 
-Handmatig patchen biedt IT-teams een hoog niveau van controle en flexibiliteit bij het beheren van patches binnen SAP ERP. Door middel van deze aanpak kan elk patch,
+Het nadeel van handmatig patchen is echter dat het tijdrovend is en veel menselijke middelen vereist. IT-teams moeten voortdurend patchbulletins volgen, patches testen en implementeren, wat kan leiden tot vertragingen bij het toepassen van cruciale updates. Bovendien vergroot de menselijke factor het risico op fouten, waardoor organisaties kwetsbaar kunnen zijn voor beveiligingsrisico’s door gemiste patches of onjuiste implementaties.
 
-klant of server-combinatie afzonderlijk worden behandeld en kan alleen geïnstalleerd worden wat nodig is, wanneer dat nodig is, waardoor het risico op onbedoelde gevolgen wordt verminderd.
+Automatisch patchen daarentegen biedt een hoog niveau van efficiëntie en consistentie bij het beheren van patches in SAP ERP. Met automatische patchingtools kunnen patches automatisch worden gedetecteerd, gedownload en toegepast volgens een vooraf ingesteld schema, waardoor de kans op gemiste patches wordt geminimaliseerd en de algehele beveiliging van het systeem wordt versterkt.
 
-Bovendien kunnen handmatige patches worden aangepast aan de unieke behoeften van een organisatie, waardoor compatibiliteitsproblemen kunnen worden vermeden en de algehele 
 
-stabiliteit van het ERP-systeem kan worden gewaarborgd \autocite{Hooper2018}. 
 
-Het nadeel van handmatig patchen is dat het tijdsintensief is en aanzienlijke menselijke middelen vereist. IT-teams moeten voortdurend patchbulletins volgen, 
+Automatische patchingtools kunnen snel reageren op nieuwe beveiligingsdreigingen, waardoor de kwetsbaarheid van het systeem vermindert. Het effectief inzetten van automatische patching vereist echter een betrouwbare en goed geconfigureerde tool. Organisaties moeten ervoor zorgen dat ze de juiste patchingtools hebben geïmplementeerd die zijn afgestemd op hun specifieke behoeften en omgeving. Er bestaat ook het risico dat automatische patchingtools incompatibele patches toepassen, wat kan leiden tot systeemstoringen of conflicten met andere softwarecomponenten.
 
-patches testen en implementeren, wat kan leiden tot vertragingen bij het toepassen van cruciale updates.
+Volgens \textcite{tozzi2017} is het beste om een evenwichtige updatestrategie te hanteren. Deze strategie maakt gebruik van automatische updates waar ze nuttig zijn, maar vermijdt ze in situaties waarin ze te veel risico met zich meebrengen of niet toereikend zijn. Updatestrategieën moeten natuurlijk worden afgestemd op de specifieke behoeften van de organisatie.
 
-Bovendien vergroot de menselijke factor het risico op fouten, waardoor organisaties kwetsbaar kunnen zijn voor beveiligingsrisico's als gevolg van gemiste patches of onjuiste implementaties.
+Over het algemeen zou een goed ontworpen updatestrategie automatische updates richten op kritieke beveiligingslekken, updates voor het besturingssysteem zelf, en systemen die gemakkelijk kunnen worden teruggerold. Aan de andere kant zijn updates voor firmware, randapparatuur, netwerkschakelaars en andere soorten software die niet betrouwbaar kunnen worden geautomatiseerd, evenals niet-kritieke updates en updates voor systemen die zeer beschikbaar moeten zijn, beter geschikt voor handmatige patching.
 
-Aan de andere kant biedt automatisch patchen een hoog niveau van efficiëntie en consistentie bij het beheren van patches binnen SAP ERP. 
+Deze aanpak helpt om een balans te vinden tussen up-to-date en veilig zijn aan de ene kant, en de stabiliteit van uw software aan de andere kant.
 
-Met automatische patchingtools kunnen patches automatisch worden gedetecteerd, gedownload en toegepast volgens een vooraf ingesteld schema, 
 
-waardoor de kans op gemiste patches wordt geminimaliseerd en de algehele beveiliging van het systeem wordt versterkt. 
 
-Bovendien kunnen automatische patchingtools zorgen voor een snelle respons op nieuwe beveiligingsdreigingen, wat de kwetsbaarheid van het systeem vermindert. 
 
-Echter, automatisch patchen vereist een betrouwbare en goed geconfigureerde tool om effectief te werken. Organisaties moeten ervoor zorgen dat ze de juiste patchingtools
 
-hebben geïmplementeerd en dat deze zijn afgestemd op hun specifieke behoeften en omgeving. Daarnaast bestaat het risico dat automatische patchingtools incompatibele patches implementeren,
 
-wat kan leiden tot systeemstoringen of conflicten met andere softwarecomponenten.
-
-Volgens \textcite{Tozzi2017} is het het beste om een evenwichtige updatestrategie te hanteren. Deze strategie moet gebruikmaken van automatische updates voor zover ze nuttig zijn,
-
-maar automatische updates vermijden in gevallen waarin ze te veel risico met zich meebrengen of onvoldoende zijn. Updatestrategieën moeten natuurlijk worden afgestemd op uw specifieke behoeften. 
-
-Over het algemeen zal een goed ontworpen updatestrategie zich richten op automatische updates voor kritieke beveiligingslekken, updates voor het besturingssysteem zelf,
-
-en updates voor systemen die gemakkelijk kunnen worden teruggerold. Aan de andere kant worden updates voor firmware, randapparatuur,
-
-netwerkschakelaars en andere soorten software die niet betrouwbaar kunnen worden geautomatiseerd, samen met niet-kritieke updates en updates voor systemen die zeer beschikbaar moeten zijn,
-
-het beste gereserveerd voor handmatige patching. Deze benadering kan u helpen om het juiste evenwicht te vinden tussen up-to-date en veilig zijn aan de ene kant, en uw software stabiel houden aan de andere kant.
 
 
 \section{Invloed van menselijke, technologische en organisatorische factoren op patchmanagement}
