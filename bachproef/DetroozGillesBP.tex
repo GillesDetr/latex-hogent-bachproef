@@ -160,7 +160,7 @@
 
 \section{Patching vermijden}
 
-Patching kan volledig worden vermeden door de service te laten opnemen door de ERP provider zelf, dit is dan een cloud service. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij deze bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
+Patching kan volledig worden vermeden door een cloud service bij de ERP provider aan te schaffen. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij de ERP bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
  willen dit echter niet doen door verschillen redenen.\\
  
  Eén van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
@@ -198,7 +198,7 @@ met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situ
 
 \section{Waar kan er worden geoptimaliseerd?}
 
-Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het proces zou kunnen worden geoptimaliseerd.
+Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het proces zou kunnen worden geoptimaliseerd, de rest van het proces bestaat voornameijk uit communicatie.
  \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie2.png}
@@ -208,8 +208,7 @@ Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het pr
 
 
 
-Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systeem zijn Avantra, SAP Landscape Management (LaMa) en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie.
-
+Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systeem zijn Avantra, SAP Landscape Management (LaMa) en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie. \\
  Avantra is specifiek gericht op SAP-systemen, waardoor diepgaande integratie en optimalisatie mogelijk is. Het biedt geautomatiseerde patchmanagementprocessen en real-time monitoring, maar heeft 
  mogelijk beperkte functionaliteit voor niet-SAP-systemen. Nog voor SAP systemen is SAP Landscape Management nog een alternatief. Deze software minder gebruiksvriendelijkk, en er is veel kennis nodig van de werking. Het voordeel 
  bij LaMa is dat je niet alleen kernel patching kan doen maar ook database patching vat niet het geval is bij Avantra. \\
@@ -220,13 +219,17 @@ Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systee
  Voor niet-SAP-systemen zou SolarWinds Patch Manager een goede keuze kunnen zijn. Het biedt een breed scala aan ondersteunde besturingssystemen en softwareapplicaties, waardoor het geschikt is voor
   een diverse IT-infrastructuur. Bovendien staat SolarWinds bekend om zijn gebruiksvriendelijke interface en eenvoudige implementatie, wat vooral handig kan zijn voor organisaties die geen gespecialiseerde IT-vaardigheden hebben.
  
-  We focussen ons verder op Avantra omdat SAP het grootste business netwerk beheert wereldwijd en waar het bedrijf waar de case study is gebeurd maakt enkel gebruik van SAP systemen \autocite{Laborde2024}.
- 
-Avantra heeft een zeer gebruiksvriendelijke vriendelijk design, op figuur 3 staat een voorbeeld van een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
+Voor SAP systemen zou Avantra een goede keuze zijn, doordat deze tool ook echt rond SAP is ontwikkeld. \\
+
+\section{Avantra voor Patchautomatisatie}
+
+Dit onderzoek focust zich verder in SAP systemen doordat het grootste business netwerk wereldwijd door hun beheert wordt \autocite{Laborde2024}. Het bedrijf waar de case study van is gemaakt maakt ook enkel gebruik van SAP systemen.
+
+Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
  rollback wil configureren. \\ 
 
 
-
+\subsubsection{Voordelen van Avantra}
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra1.png}
@@ -253,7 +256,7 @@ Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan g
     \centering
     \includegraphics[width=\textwidth]{avantra3.png}
     \caption{Avantra patch configuratie}
-     \label{fig:avantra1}
+     \label{fig:avantra3}
 \end{figure}
 
 
@@ -263,14 +266,14 @@ Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur 5
     \centering
     \includegraphics[width=\textwidth]{avantra4.png}
     \caption{Avantra opstelling van het systeem}
-     \label{fig:avantra1}
+     \label{fig:avantra4}
 \end{figure}
 
-
+\subsubsection{Nadelen van Avantra}
 Avantra heeft dus vele voordelen maar ook nadelen. Zo is het een tool die enkel kernel patching doet en dus geen database patches, dit moet dan wel nog manueel worden gedaan. Ook is het een betalende tool en het bedrag kan hoog oplopen naarmate de grootte van het bedrijf.
 En daarbij is het belangrijk om te weten dat een automatisatie geen plug en play is, er moeten enkele stappen worden ondernomen om het systeem op te stellen.
 
-Zo heeft Avantra meerdere servers. In figuur 5 staat enkele onderdelen van het Avantra systeem. De Avantra UI is de de interface waar de gebruikers effectief met communiceren, hierin staan alle functionaliteinten van het Avantra-Systeem. Zo kan bijvoorbeeld het SAP-systeem gemonitord worden. Op
+Zo heeft Avantra meerdere servers. In figuur ~\ref{fig:avantra4} staat enkele onderdelen van het Avantra systeem. De Avantra UI is de de interface waar de gebruikers effectief met communiceren, hierin staan alle functionaliteinten van het Avantra-Systeem. Zo kan bijvoorbeeld het SAP-systeem gemonitord worden. Op
 dit platform zal de patchbeheerder de patch moeten uploaden en de configuratie instellen. De automatisatie server zorgt voor het uitvoeren van de geautomatiseerd taken en processen binnen de SAP-omgeving dit is dan ook het centrum van het Avantra systeem.
 
 Vervolgens is er een Database server die relevante gegevens opslaat van de SAP-omgeving van de klant. Dit kan bijvoorbeeld informatie zijn over systeemconfiguraties, prestatiegegevens, logs, meldingen en historische trends. 
@@ -278,12 +281,10 @@ Vervolgens is er een Database server die relevante gegevens opslaat van de SAP-o
 Tot slot integreert Avantra met de SAP-server van de klant, waar de SAP-applicaties draaien. Avantra maakt verbinding met deze server om real-time gegevens te verzamelen.
 Op basis van deze gegevens kan Avantra proactief problemen identificeren, mogelijke risico's signaleren en eventueel automatisch acties ondernemen om de SAP-omgeving betrouwbaarder te maken.
 
-(TODO)
 
 
-%\input{...}
-%\input{...}
-%...
+
+
 
 \input{conclusie}
 
