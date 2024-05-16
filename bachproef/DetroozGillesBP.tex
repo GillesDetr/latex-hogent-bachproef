@@ -55,9 +55,9 @@
 \author{Gilles Detrooz}
 \supervisor{Dhr. M. Asselberg}
 \cosupervisor{Dhr. K. Heyndrickx}
-\title[Een Diepgaande Analyse van Praktijken, Toekomstige Behoeften en Efficiëntieverhogende Maatregelen]%
+\title[Een diepgaande analyse van praktijken en efficiëntieverhogende Maatregelen]%
     {Optimalisatie van ERP (Enterprise resource planning)
-    Patchmanagement in Groot- en Middelgrote Bedrijven}
+    patchmanagement bij Managed Service Providers}
 \academicyear{\advance\year by -1 \the\year--\advance\year by 1 \the\year}
 \examperiod{1}
 \degreesought{\IfLanguageName{dutch}{Professionele bachelor in de toegepaste informatica}{Bachelor of applied computer science}}
@@ -128,19 +128,6 @@
 %\mainmatter{}
 
 
-        % \section{Uitdagingen en Knelpunten}
-        % Een van de belangrijkste uitdagingen die organisaties tegenkomen, is de complexiteit van het patchmanagementproces, vooral bij grootschalige ERP-systemen zoals SAP. Het beheren van patches voor meerdere systemen en applicaties binnen het ERP-landschap kan een uitdaging zijn vanwege de afhankelijkheden en mogelijke verstoringen. Het gebrek aan automatisering en integratie tussen patchmanagementtools en ERP-systemen kan de efficiëntie verminderen en de kans op fouten vergroten.
-
-        % \section{Verwachtingen en Toekomstige Ontwikkelingen}
-        % Respondenten benadrukten de behoefte aan meer geautomatiseerde en gestroomlijnde patchmanagementprocessen om de complexiteit te verminderen en de reactietijd te verbeteren. Er is een groeiende interesse in geavanceerde patchmanagementtools, zoals Avantra, die specifiek zijn ontworpen voor SAP ERP-systemen en kunnen helpen bij het automatiseren van patching en het beheer van systeemconfiguraties.
-
-        % \section{Avantra voor Patchautomatisatie}
-        % Respondenten die al gebruik maken van Avantra voor patchautomatisatie, rapporteerden positieve ervaringen met betrekking tot het vereenvoudigen van het patchproces en het verminderen van handmatige inspanningen. Avantra biedt mogelijkheden voor geautomatiseerde patchdetectie, -evaluatie en -implementatie, waardoor organisaties snel kunnen reageren op kwetsbaarheden en beveiligingspatches. De integratie van Avantra met SAP ERP-systemen biedt een naadloze ervaring en minimaliseert de kans op fouten door menselijke tussenkomst.
-
-        % \section{Conclusie}
-        % Al met al tonen de resultaten aan dat er een duidelijke behoefte is aan verbeteringen in het patchmanagementproces voor SAP ERP-systemen, met name door middel van automatisering en geavanceerde tools zoals Avantra. Organisaties streven naar efficiëntere en effectievere manieren om hun systemen up-to-date en beveiligd te houden, en oplossingen zoals Avantra spelen een cruciale rol bij het realiseren van deze doelstellingen.
-
-
 
 % De eerste hoofdstukken van een bachelorproef zijn meestal een inleiding op
 % het onderwerp, literatuurstudie en verantwoording methodologie.
@@ -155,33 +142,27 @@
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
 % elke fase in je onderzoek in een apart hoofdstuk bespreken.
-\chapter{\IfLanguageName{dutch}{Case Study}{Consultantiebedrijf}}
+\chapter{\IfLanguageName{dutch}{Case Study}{Managed service provider}}
 \label{ch:corpus}
 
 \section{Patching vermijden}
 
-Patching kan volledig worden vermeden door een cloud service bij de ERP provider aan te schaffen. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij de ERP bedrijven het patchwerk voor de klant gaan doen. Vele bedrijven
+Volgens \textcite{Munck2024} kan patching volledig worden vermeden door een cloud service bij de ERP provider aan te schaffen. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij de managed service provider het patchwerk voor de klant gaan doen. Bij deze clouddiensten is de kostprijs wel veel voorspelbaarder vergeleken met de lokale opslag. Vele bedrijven
  willen dit echter niet doen door verschillen redenen.\\
- 
- Eén van de belangrijkste overwegingen is de behoefte aan specifieke aanpassingen die niet volledig worden ondersteund door standaard cloudoplossingen. 
- Deze aanpassingen kunnen variëren van maatwerkvereisten tot complexe integraties met bestaande systemen, die beter kunnen worden beheerd in een lokale omgeving.
-Daarnaast spelen dataveiligheid en compliance een cruciale rol, vooral voor organisaties in sectoren zoals overheid, gezondheidszorg en financiële dienstverlening.
- Strikte regelgeving en compliance-eisen vereisen vaak een hoog niveau van controle over dataopslag en -beheer, wat gemakkelijker te realiseren is in een lokale omgeving.\\ 
 
-Bovendien hebben sommige organisaties al aanzienlijk geïnvesteerd in lokale infrastructuur, waardoor de overstap naar de cloud kostbaar kan zijn en niet meer de moeite meer is.
+ 
+Vaak is de hoofdreden dat sommige services niet volledig worden ondersteund door standaard cloudoplossingen. Als bedrijf ben je dan ook afhankelijk van deze cloud provider en mocht er iets mislopen met de cloud provider kan dit grote gevolgen hebben voor het bedrijf.
+In sectoren zoals overheid, gezondheidszorg en financiële dienstverlening speelt dataveiligheid en compliance een cruciale rol. dit is ook vaak gemakkelijker te realiseren in een lokale omgeving.\\ 
+
+In sommige gevallen hebben sommige organisaties al aanzienlijk geïnvesteerd in lokale infrastructuur, waardoor de overstap naar de cloud kostbaar kan zijn en voor hun niet meer de moeite meer is.
+
 Verder bieden lokale implementaties vaak meer flexibiliteit en controle over configuratie en aanpassingen, waardoor organisaties beter kunnen inspelen op hun specifieke behoeften en 
 bedrijfsprocessen.\\
 
-Hoewel cloudoplossingen een voorspelbare kosten bieden, kunnen sommige organisaties op de lange termijn goedkoper uit zijn met een lokale implementatie, vooral als
-ze al beschikken over de benodigde infrastructuur en expertise.\\
 
-Tot slot kan het intern beheren van ERP-systemen organisaties een gevoel van vertrouwen geven in hun eigen teams en processen voor risicobeheer en operationele controle, wat belangrijk 
-kan zijn voor het behoud van bedrijfscontinuïteit en compliance met sectorregelgeving.\\
+\section{Huidige situatie van het patchproces binnen een ERP Managed Service Provider bedrijf}
 
-
-\section{Huidige situatie van het patchproces binnen een ERP consultancy bedrijf}
-
-Net omdat er vele bedrijven nog niet overstappen naar cloudinfrastructuur beheerd door de erp provider, wordt er in dit onderzoek gefocussed op systemen die door bedrijven beheerd worden, lokaal of in de cloud. In figuur 1 (groot in Bijlage~\ref{bijlage:1}) is de huidige situatie van het patchproces te vinden binnen een ERP consultancy bedrijf \\
+Net omdat er vele bedrijven nog niet overstappen naar cloudinfrastructuur beheerd door de erp provider, wordt er in dit onderzoek gefocussed op systemen die door bedrijven beheerd worden, lokaal of in de cloud. In figuur 1 (groot in Bijlage~\ref{bijlage:1}) is de huidige situatie van het patchproces te vinden binnen een ERP Managed Service Provider \\
 
 \begin{figure}[htbp]
     \centering
@@ -198,13 +179,16 @@ met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situ
 
 \section{Waar kan er worden geoptimaliseerd?}
 
-Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het proces zou kunnen worden geoptimaliseerd, de rest van het proces bestaat voornameijk uit communicatie.
+Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het patchmanagement proces zelf zou kunnen worden geoptimaliseerd, de rest van het proces bestaat voornameijk uit communicatie.
  \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie2.png}
     \caption{Nieuwe situatie met patchautomatisatie (in het groot te zien in bijlage 2)}
      \label{fig:huidigesituatie2}
 \end{figure}
+
+Wat we dus kunnen zien is dat de communicatie van essentieel belang is,
+
 
 
 
@@ -225,11 +209,13 @@ Voor SAP systemen zou Avantra een goede keuze zijn, doordat deze tool ook echt r
 
 Dit onderzoek focust zich verder in SAP systemen doordat het grootste business netwerk wereldwijd door hun beheert wordt \autocite{Laborde2024}. Het bedrijf waar de case study van is gemaakt maakt ook enkel gebruik van SAP systemen.
 
-Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
- rollback wil configureren. \\ 
 
 
 \subsubsection{Voordelen van Avantra}
+
+Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
+ rollback wil configureren. \\ 
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra1.png}
@@ -261,7 +247,7 @@ Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan g
 
 
 \section{Opstelling Avantra systeen}
-Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur 5 staat een mogelijk opstelling voor een Avantra systeem. 
+Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur ~\ref{fig:avantra4} staat een mogelijk opstelling voor een Avantra systeem. 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{avantra4.png}
@@ -273,7 +259,7 @@ Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur 5
 Avantra heeft dus vele voordelen maar ook nadelen. Zo is het een tool die enkel kernel patching doet en dus geen database patches, dit moet dan wel nog manueel worden gedaan. Ook is het een betalende tool en het bedrag kan hoog oplopen naarmate de grootte van het bedrijf.
 En daarbij is het belangrijk om te weten dat een automatisatie geen plug en play is, er moeten enkele stappen worden ondernomen om het systeem op te stellen.
 
-Zo heeft Avantra meerdere servers. In figuur ~\ref{fig:avantra4} staat enkele onderdelen van het Avantra systeem. De Avantra UI is de de interface waar de gebruikers effectief met communiceren, hierin staan alle functionaliteinten van het Avantra-Systeem. Zo kan bijvoorbeeld het SAP-systeem gemonitord worden. Op
+Zo is er een integratie van Avantra nogig in verschillende servers. In figuur ~\ref{fig:avantra4} staat enkele onderdelen van het Avantra systeem. De Avantra UI is de de interface waar de gebruikers effectief met communiceren, hierin staan alle functionaliteinten van het Avantra-Systeem. Zo kan bijvoorbeeld het SAP-systeem gemonitord worden. Op
 dit platform zal de patchbeheerder de patch moeten uploaden en de configuratie instellen. De automatisatie server zorgt voor het uitvoeren van de geautomatiseerd taken en processen binnen de SAP-omgeving dit is dan ook het centrum van het Avantra systeem.
 
 Vervolgens is er een Database server die relevante gegevens opslaat van de SAP-omgeving van de klant. Dit kan bijvoorbeeld informatie zijn over systeemconfiguraties, prestatiegegevens, logs, meldingen en historische trends. 
