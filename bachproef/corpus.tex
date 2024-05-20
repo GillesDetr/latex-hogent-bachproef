@@ -30,12 +30,13 @@ Net omdat er vele bedrijven nog niet overstappen naar cloudinfrastructuur beheer
 
 huidige situatie van het patchproces te vinden binnen een ERP Managed Service Provider \\
 
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie.jpg}
     \caption{Huidige situatie (in het groot te zien in bijlage 1)}
     \label{fig:huidigesituatie}
 \end{figure}
+\newpage
 
 Wat we dus kunnen zien is dat de communicatie van essentieel belang is, net omdat het zo belangerijk is is het essentieel dat de communicatie tussen alle stakeholders zo vlot mogelijk verloopt. Dit kan door duidelijk en bondig te communiceren. Wat 
 
@@ -61,12 +62,13 @@ met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situ
 \section{Waar kan er worden geoptimaliseerd?}
 
 Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het patchmanagement proces zelf zou kunnen worden geoptimaliseerd, de rest van het proces bestaat voornameijk uit communicatie.
- \begin{figure}[htbp]
+ \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie2.png}
     \caption{Deel dat kan geautomatiseerd worden (=Patchen zelf)}
      \label{fig:huidigesituatie2}
 \end{figure}
+\newpage
 
 
 Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systeem zijn Avantra, SAP Landscape Management (LaMa) en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie. \\
@@ -83,12 +85,13 @@ Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systee
 Voor SAP systemen zou Avantra een goede keuze zijn, doordat deze tool ook echt rond SAP is ontwikkeld. \\
 
 \section{Nieuwe situatie}
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{nieuwesituatie.png}
     \caption{Nieuwe Situatie: wanneer men patchautomatisatie toepast}
      \label{fig:nieuwesituatie}
 \end{figure}
+\newpage
 
 In figuur ~\ref{fig:nieuwesituatie} is de nieuwe situatie te zien wanneer we patchautomatisatie toepassen. In het rood is het deel waar men nog steeds manueel moet ingrijpen, dit is het deel waar de communicatie tussen de stakeholders gebeurt. In het groen is het de deel 
 
@@ -99,42 +102,47 @@ waar de configuratie van het type ERP server, tijdstip van patchen enzovoort geb
 Doordat het grootste business netwerk wereldwijd door hun ERP systeem beheerd wordt \autocite{Laborde2024}. Het bedrijf waar de case study van is gemaakt maakt enkel gebruik van SAP systemen.
 
 
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{avantra1.png}
     \caption{Avantra patch configuratie}
      \label{fig:avantra1}
 \end{figure}
+\newpage
+
 
 Daarnaast is alles transparant, alle fasen van het proces worden duidelijk vermeld en er wordt bevestiging gegeven als de fase correct is verlopen. In de figuur 4 zien we dat Avantra verschillende
 nuttige functies heeft zoals huidige versie checken om zeker te zijn dat het goed werd configureert, een back-up maken van de huidige staat, bericht sturen naar de gebruikers om de real time status weer
    te geven, het systeem automatisch naar beneden halen. En indien nodig een rollback uitvoeren met de voorgaande back-up die werd gemaakt.
 
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{avantra2.png}
     \caption{Avantra patch configuratie detail}
      \label{fig:avantra2}
 \end{figure}
+\newpage
 
 Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan gezien worden waar de fout zou zitten mocht er één zijn.
 
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{avantra3.png}
     \caption{Avantra patch configuratie}
      \label{fig:avantra3}
 \end{figure}
+\newpage
 
 
 \subsubsection{Opstelling Avantra systeen}
 Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur ~\ref{fig:avantra4} staat een mogelijk opstelling voor een Avantra systeem. 
-\begin{figure}[htbp]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{avantra4.png}
     \caption{Avantra opstelling van het systeem}
      \label{fig:avantra4}
 \end{figure}
+\newpage
 
 \subsubsection{Voordelen van Avantra}
 Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
