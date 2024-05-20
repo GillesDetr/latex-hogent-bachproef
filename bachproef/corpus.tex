@@ -7,10 +7,11 @@
 
 \section{Patching vermijden}
 
-Volgens \textcite{Munck2024} kan patching volledig worden vermeden door een cloud service bij de ERP provider aan te schaffen. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij de managed service provider het patchwerk voor de klant gaan doen. Bij deze clouddiensten is de kostprijs wel veel voorspelbaarder vergeleken met de lokale opslag. Vele bedrijven
+Volgens \textcite{Munck2024} kan patching volledig worden vermeden door een cloud service bij de ERP provider aan te schaffen. Zo kan men een cloud service aankopen zoals SAP RISE, Oracle Cloud ERP of Workday waarbij de managed service provider het patchwerk voor de klant gaan doen. In vele gevallen Bij clouddiensten is de kostprijs voorspelbaarder vergeleken met de lokale opslag. Vele bedrijven
  willen dit echter niet doen door verschillen redenen.\\
 
- 
+
+\section{Waarom kiezen bedrijven voor lokale opslag?}
 Vaak is de hoofdreden dat sommige services niet volledig worden ondersteund door standaard cloudoplossingen. Als bedrijf ben je dan ook afhankelijk van deze cloud provider en mocht er iets mislopen met de cloud provider kan dit grote gevolgen hebben voor het bedrijf.
 In sectoren zoals overheid, gezondheidszorg en financiële dienstverlening speelt dataveiligheid en compliance een cruciale rol. dit is ook vaak gemakkelijker te realiseren in een lokale omgeving.\\ 
 
@@ -18,6 +19,7 @@ In sommige gevallen hebben sommige organisaties al aanzienlijk geïnvesteerd in 
 
 Verder bieden lokale implementaties vaak meer flexibiliteit en controle over configuratie en aanpassingen, waardoor organisaties beter kunnen inspelen op hun specifieke behoeften en 
 bedrijfsprocessen.\\
+
 
 
 \section{Huidige situatie van het patchproces binnen een ERP Managed Service Provider bedrijf}
@@ -31,9 +33,18 @@ Net omdat er vele bedrijven nog niet overstappen naar cloudinfrastructuur beheer
     \label{fig:huidigesituatie}
 \end{figure}
 
-De patch kan niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden van de ERP provider. Het patchingsproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
+Wat we dus kunnen zien is dat de communicatie van essentieel belang is, net omdat het zo belangerijk is is het essentieel dat de communicatie tussen alle stakeholders zo vlot mogelijk verloopt. Dit kan door duidelijk en bondig te communiceren. Wat ook zeer belangerijk onderdeel is het actief luisteren naar de klant hun noden, dit kan bijvoorbeeld zijn de tijdsspanne waarin ze willen patchen, of op voorhand afspreken
+ welke patches mogen uitgevoerd worden door de managed service provider zonder de uitdrukkelijke toestemming van de klant. De klant informeren wanneer de patch gaat worden uitgevoerd en de wanneer deze uitgevoerd is om geen paniek te zaaien bij de klant. 
+
+Met de opkomst van AI (artificiele inteligentie) zal het communiceren alleen maar sneller en efficiënter verlopen. Zo kan AI bijvoorbeeld de agenda raadplegen en automatisch een tijdstip voorstellen voor de patch. Ook zou een AI kunnen helpen met een prioriteit toe te kennen aan een patch en zo het proces nog verder helpen versnellen. \\
+
+
+
+
+
+Voor het patchen zelf kan het bestand niet automatisch worden gedownload en zal dus manueel moeten worden gedownload worden bij de ERP provider. Het patchingsproces begint met het beoordelen van de patch. Het security team bekijkt of het nut heeft
 om te patchen, dit bepalen ze meestal door het type patch. Indien het een component patch of hotfix (= dringende patch) is zal dit een minder dringende patch zijn ten opzichte van een CVE (Common Vulnerabilities and Exposures) patch. De kostprijs, tijd en impact berekenen
-die de patch nodig zal hebben zal verschillen van patch tot patch maar volgens \textcite{Heyndrickx2024} zal een gemidde patching procedure van een kernel tussen 30 minuten en 1 uur duren per systeem, dit bevestigd nogmaals de nood aan automatisatie van dit proces. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
+die de patch nodig zal hebben zal verschillen van patch tot patch maar volgens \textcite{Heyndrickx2024} zal een gemidde patching procedure van een kernel tussen 45 minuten en 90 minuten duren per systeem, dit bevestigd nogmaals de nood aan automatisatie van dit proces. CVE's en hotfixes krijgen meestal een cijfer toegekend wat de urgentie van de patch aantoont. Indien dit een component patch is zal dit veel minder middelen kosten vergeleken
 met een kernel patch bijvoorbeeld. Dit is zeer afhankelijk van situatie tot situatie dus hier kan men het proces niet verder worden geoptimaliseerd. In figuur 1 is er ook duidelijk te zien dat er veel gecomuniceerd moet worden tussen alle betrokken partijen, dit is dus een essentieel onderdeel van het Patchmanagement. \\
 
 
@@ -43,12 +54,10 @@ Het omkaderde deel in figuur 2 (groot in Bijlage~\ref{bijlage:2}) is waar het pa
  \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{huidigesituatie2.png}
-    \caption{Nieuwe situatie met patchautomatisatie (in het groot te zien in bijlage 2)}
+    \caption{Deel dat kan geautomatiseerd worden (=Patchen zelf)}
      \label{fig:huidigesituatie2}
 \end{figure}
 
-Wat we dus kunnen zien is dat de communicatie van essentieel belang is, net omdat het zo belangerijk is is het essentieel dat de communicatie tussen alle stakeholders zo vlot mogelijk verloopt. Dit kan door duidelijk en bondig te communiceren. Wat ook zeer belangerijk onderdeel is het actief luisteren naar de klant hun noden, dit kan bijvoorbeeld zijn de tijdsspanne waarin ze willen patchen, of op voorhand afspreken
- welke patches mogen uitgevoerd worden door de managed service provider zonder de uitdrukkelijke toestemming van de klant. De klant informeren wanneer de patch gaat worden uitgevoerd en de wanneer deze uitgevoerd is om geen paniek te zaaien bij de klant.\\
 
 Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systeem zijn Avantra, SAP Landscape Management (LaMa) en SolarWinds Patch Manager. Deze tools bieden diverse voordelen en nadelen, afhankelijk van de specifieke behoeften van een organisatie. \\
  Avantra is specifiek gericht op SAP-systemen, waardoor diepgaande integratie en optimalisatie mogelijk is. Het biedt geautomatiseerde patchmanagementprocessen en real-time monitoring, maar heeft 
@@ -63,14 +72,20 @@ Enkele tools die kunnen worden gebruikt voor een kernel patch van een ERP systee
  
 Voor SAP systemen zou Avantra een goede keuze zijn, doordat deze tool ook echt rond SAP is ontwikkeld. \\
 
+\section{Nieuwe situatie}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{nieuwesituatie.png}
+    \caption{Nieuwe Situatie: wanneer men patchautomatisatie toepast}
+     \label{fig:nieuwesituatie}
+\end{figure}
+
+In figuur ~\ref{fig:nieuwesituatie} is de nieuwe situatie te zien wanneer we patchautomatisatie toepassen. In het rood is het deel waar men nog steeds manueel moet ingrijpen, dit is het deel waar de communicatie tussen de stakeholders gebeurt. In het groen is het de deel waar de configuratie van het type ERP server, tijdstip van patchen enzovoort gebeurt. In het groen zien we waar het patchen zelf gebeurt, dit was voordien een deel dat tussen 45 minuten en 90 minuten de volledige aandacht van de gebruiker vroeg. Dit kan nu in de achtergrond gebeuren en de gebruiker kan verder werken. \\
+
+
 \section{Avantra voor Patchautomatisatie}
+Doordat het grootste business netwerk wereldwijd door hun ERP systeem beheerd wordt \autocite{Laborde2024}. Het bedrijf waar de case study van is gemaakt maakt enkel gebruik van SAP systemen.
 
-Dit onderzoek focust zich verder in SAP systemen doordat het grootste business netwerk wereldwijd door hun beheerd wordt \autocite{Laborde2024}. Het bedrijf waar de case study van is gemaakt maakt ook enkel gebruik van SAP systemen.
-
-\subsubsection{Voordelen van Avantra}
-
-Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
- rollback wil configureren. \\ 
 
 \begin{figure}[htbp]
     \centering
@@ -100,7 +115,7 @@ Indien men wenst kan men ook de berichten in meer detail bekijken zodat er kan g
 \end{figure}
 
 
-\section{Opstelling Avantra systeen}
+\subsubsection{Opstelling Avantra systeen}
 Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur ~\ref{fig:avantra4} staat een mogelijk opstelling voor een Avantra systeem. 
 \begin{figure}[htbp]
     \centering
@@ -108,6 +123,10 @@ Voor een automatisch patchmanagement moet men een omgeving opstellen in figuur ~
     \caption{Avantra opstelling van het systeem}
      \label{fig:avantra4}
 \end{figure}
+
+\subsubsection{Voordelen van Avantra}
+Wanneer Avantra wordt gestart ziet men een gebruiksvriendelijke design, op figuur 3 staat een voorbeeld een patch configuratie. Bepaalde parameters worden ingegeven: bijvoorbeeld de bundle (type kernel en database), de downtime, backup of 
+ rollback wil configureren. \\ 
 
 \subsubsection{Nadelen van Avantra}
 Avantra heeft dus vele voordelen maar ook nadelen. Zo is het een tool die enkel kernel patching doet en dus geen database patches, dit moet dan wel nog manueel worden gedaan. Ook is het een betalende tool en het bedrag kan hoog oplopen naarmate de grootte van het bedrijf.
